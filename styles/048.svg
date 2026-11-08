@@ -1,18 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
-  <rect x="0" y="0" width="680" height="460" fill="#FAF7F2"/>
-  <circle cx="548" cy="124" r="104" fill="#FF6B35"><animateTransform attributeName="transform" type="rotate" values="0 548 124;360 548 124" dur="1.4s" begin="0s" fill="freeze"/></circle>
-  <rect x="0" y="416" width="137" height="44" fill="#D9A441"><animate attributeName="width" values="0;137" dur="0.8s" begin="0.1s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
-  <rect x="444" y="236" width="208" height="6" fill="#241D14"/>
-  <path d="M 470 436 L 560 350 L 650 436 Z" fill="#D9A441"><animate attributeName="opacity" values="0;1" dur="0.7s" begin="0.15s" fill="freeze"/></path>
-  <text x="48" y="72" font-size="11" fill="#7E6E5B" letter-spacing="2">BAUHAUS / FORM 048</text>
-  <text x="48" y="132" font-size="52" fill="#241D14" font-weight="700">先看审美<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.05s" fill="freeze"/></text>
-  <rect x="48" y="146" width="120" height="4" fill="#FF6B35"/>
-  <text x="48" y="196" font-size="17" fill="#241D14">我发现 HY 4 svg 能力不错<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.20s" fill="freeze"/></text>
-  <text x="48" y="230" font-size="17" fill="#241D14">我想做一个公众号是 svg skills<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.27s" fill="freeze"/></text>
-  <text x="48" y="264" font-size="17" fill="#241D14">我是一个 svg 小白<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.34s" fill="freeze"/></text>
-  <text x="48" y="298" font-size="17" fill="#241D14">所以不去评价能力如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.41s" fill="freeze"/></text>
-  <text x="48" y="332" font-size="17" fill="#FF6B35" font-weight="600">先看看审美如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.48s" fill="freeze"/></text>
-  <text x="48" y="366" font-size="17" fill="#241D14">我让他做了两三个风格<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.55s" fill="freeze"/></text>
-  <text x="48" y="416" font-size="10" fill="#7E6E5B">配置 原色三色块 · 布局 几何叠压 · 动画 fade</text>
-  <text x="632" y="416" font-size="10" fill="#7E6E5B" text-anchor="end">048 / 100</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="Georgia,'Songti SC','SimSun',serif">
+  <rect x="0" y="0" width="680" height="440" fill="#F4F4F0"/>
+  <rect x="80" y="64" width="1" height="316" fill="#C9C9C0"><animate attributeName="height" values="0;316" dur="0.9s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
+  
+  
+  <line x1="112" y1="96" x2="624" y2="96" stroke="#C9C9C0" stroke-width="1"/>
+  <text x="112" y="152" font-size="20" fill="#0A0A0A">我发现 HY 4 svg 能力不错<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.10s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="112" y="192" font-size="20" fill="#0A0A0A">我想做一个公众号是 svg skills<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.20s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="112" y="232" font-size="20" fill="#0A0A0A">我是一个 svg 小白<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.30s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="112" y="272" font-size="20" fill="#0A0A0A">所以不去评价能力如何<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.40s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="112" y="312" font-size="20" fill="#C2185B" font-weight="600">先看看审美如何<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.50s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="112" y="352" font-size="20" fill="#0A0A0A">我让他做了两三个风格<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.60s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <rect x="112" y="392" width="8" height="8" fill="#C2185B"/>
+  
+  
 </svg>

@@ -1,16 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
-  <rect x="0" y="0" width="680" height="440" fill="#F8FAF9"/>
-  <rect x="56" y="64" width="1" height="318" fill="#D7E3DC"><animate attributeName="height" values="0;318" dur="0.9s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
-  <text x="88" y="76" font-size="11" fill="#6E8579" letter-spacing="2">N O T E   /   094</text>
-  <text x="624" y="76" font-size="11" fill="#6E8579" text-anchor="end">HY 4 · SVG LAB</text>
-  <line x1="88" y1="96" x2="624" y2="96" stroke="#D7E3DC" stroke-width="1"/>
-  <text x="88" y="152" font-size="18" fill="#1B2B24">我发现 HY 4 svg 能力不错<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.10s" fill="freeze"/></text>
-  <text x="88" y="194" font-size="18" fill="#1B2B24">我想做一个公众号是 svg skills<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.20s" fill="freeze"/></text>
-  <text x="88" y="236" font-size="18" fill="#1B2B24">我是一个 svg 小白<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.30s" fill="freeze"/></text>
-  <text x="88" y="278" font-size="18" fill="#1B2B24">所以不去评价能力如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.40s" fill="freeze"/></text>
-  <text x="88" y="320" font-size="18" fill="#635BFF" font-weight="600">先看看审美如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.50s" fill="freeze"/></text>
-  <text x="88" y="362" font-size="18" fill="#1B2B24">我让他做了两三个风格<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.60s" fill="freeze"/></text>
-  <rect x="88" y="392" width="8" height="8" fill="#635BFF"/>
-  <text x="108" y="400" font-size="11" fill="#6E8579">配置 #635BFF · 布局 单栏笔记流 · 动画 fade</text>
-  <text x="624" y="400" font-size="11" fill="#6E8579" text-anchor="end">094 / 100</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 540" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <rect x="0" y="0" width="680" height="540" fill="#F4E7EF"/>
+  <line x1="0" y1="56" x2="680" y2="56" stroke="#EBD7E2" stroke-width="1"/>
+  <g transform="rotate(-3 192 158)"><rect x="52" y="96" width="290" height="124" fill="#FDF7FA" stroke="#EBD7E2" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0 20;0 0" dur="0.7s" begin="0.00s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect><rect x="172" y="88" width="52" height="16" fill="#8B5CF6"/></g>
+  <g transform="rotate(2 440 272)"><rect x="300" y="210" width="290" height="124" fill="#F4E7EF" stroke="#EBD7E2" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0 20;0 0" dur="0.7s" begin="0.12s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect><rect x="420" y="202" width="52" height="16" fill="#8B5CF6"/></g>
+  <g transform="rotate(-2 290 398)"><rect x="150" y="336" width="290" height="124" fill="#FDF7FA" stroke="#EBD7E2" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0 20;0 0" dur="0.7s" begin="0.24s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect><rect x="270" y="328" width="52" height="16" fill="#8B5CF6"/></g>
+  <text x="72" y="148" font-size="14" fill="#33152A" transform="rotate(-3 72 148)">我发现 HY 4 svg 能力不错<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.18s" fill="freeze"/></text>
+  <text x="72" y="188" font-size="14" fill="#33152A" transform="rotate(-3 72 188)">我想做一个公众号是 svg skills<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.27s" fill="freeze"/></text>
+  <text x="320" y="262" font-size="14" fill="#33152A" transform="rotate(2 320 262)">我是一个 svg 小白<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.36s" fill="freeze"/></text>
+  <text x="320" y="302" font-size="14" fill="#33152A" transform="rotate(2 320 302)">所以不去评价能力如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.45s" fill="freeze"/></text>
+  <text x="170" y="388" font-size="14" fill="#8B5CF6" transform="rotate(-2 170 388)" font-weight="600">先看看审美如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.54s" fill="freeze"/></text>
+  <text x="170" y="428" font-size="14" fill="#33152A" transform="rotate(-2 170 428)">我让他做了两三个风格<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.63s" fill="freeze"/></text>
 </svg>

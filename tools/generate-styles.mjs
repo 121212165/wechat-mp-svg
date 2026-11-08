@@ -1,7 +1,10 @@
 /**
  * 生成 100 个公众号安全 SVG 风格，并注入展示页。
  *
- * 10 个设计流派 × 10 个变体。变体不是「换个颜色」：
+ * v0.3.0：20 个构图原型 × 5 个变体 = 100。
+ * 独立审核判定 v0.2.0「10 骨架 × 10 参数变体」视觉可区分度仅 2.20/5，
+ * 因此把「同骨架换参数」改为「更多真正不同的信息架构 + 不同画布比例」，并删掉画面上的设计说明文字。
+ * 变体仍然不是「换个颜色」：
  *   - 色板：10 套浅色板 / 10 套深色底，accent 按家族与变体双重错位取用
  *   - 字体：无衬线 / 衬线 / 等宽 / 系统栈 轮换
  *   - 布局：每个流派内部由 v 驱动栏数、间距、字号、圆角、错位量、装饰密度
@@ -13,10 +16,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { FAMILIES, LINES } from './families.mjs';
+import { EXTRA_FAMILIES } from './families-extra.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const STYLES_DIR = path.join(ROOT, 'styles');
 const INDEX = path.join(ROOT, 'index.html');
+
+const ALL_FAMILIES = [...FAMILIES, ...EXTRA_FAMILIES];
+const VARIANTS = 5;
 
 /* 10 套浅色板：bg / surface / ink / sub / accent / line / second */
 const PALETTES = [
@@ -42,33 +49,50 @@ const FONTS = [
 const TAGS = ['极简','密排','左锚','居中','大字号','细线','粗框','错位','双色','高对比',
               '疏朗','紧凑','衬线','等宽','描边','叠印','网格','留白','荧光','硬边'];
 
-function paletteFor(fam, fi, v){
-  const base = PALETTES[(v*3 + fi*7) % PALETTES.length];   // gcd(3,10)=1 → 同家族 10 个变体底色全不同
-  const accent = PALETTES[(v + fi*2) % PALETTES.length].accent;
+function paletteFor(fam, n){
+  // n = 1..100；(n%10, floor((n-1)/10)) 构成 100 个互不重复的 (base, accent) 对
+  const base = PALETTES[n % PALETTES.length];
+  const accent = PALETTES[Math.floor((n-1)/10) % PALETTES.length].accent;
   if (!fam.dark) return { ...base, accent, deep:'#111111' };
-  const g = (34 + v*2).toString(16).padStart(2,'0');
+  const g = (30 + (n % 20) * 2).toString(16).padStart(2,'0');
   return {
-    bg: DARK_BGS[(v + fi) % DARK_BGS.length], surface:'#191D26',
+    bg: DARK_BGS[n % DARK_BGS.length], surface:'#191D26',
     ink:'#F2F2F5', sub:'#9096A6', accent, line:'#'+g+g+g,
     second: base.second, deep:'#0A0A0A'
   };
 }
 
+/* 删掉画面上印着的「配置 / 布局 / 动画 / 编号 / 实验室」说明文字：
+   独立审核指出它既破坏盲评，又让 100 张图共享同一套「设计说明卡」外观。
+   只删 font-size<=12 且命中关键词的 <text>，六行正文（>=14px）不受影响。 */
+let metaRemoved = 0;
+function stripMeta(svg){
+  return svg.replace(/<text\b([^>]*)>([\s\S]*?)<\/text>/g, (m, attrs, inner) => {
+    const fs = Number((attrs.match(/font-size="(\d+)"/) || [])[1] || 0);
+    const txt = inner.replace(/<[^>]*>/g, '');
+    const isMeta = fs > 0 && fs <= 12 &&
+      /配置|布局|动画|\/ 100|SVG LAB|GRID|S T Y L E|N O T E|STYLE|No\.|LAB|·/.test(txt);
+    if (isMeta) { metaRemoved++; return ''; }
+    return m;
+  });
+}
+
 fs.mkdirSync(STYLES_DIR, { recursive:true });
 const catalog = [];
-for (let fi=0; fi<FAMILIES.length; fi++){
-  const fam = FAMILIES[fi];
-  for (let v=0; v<10; v++){
-    const n = fi*10 + v + 1, id = String(n).padStart(3,'0');
-    const P = paletteFor(fam, fi, v);
-    const font = FONTS[(v + fi) % FONTS.length];
+for (let fi=0; fi<ALL_FAMILIES.length; fi++){
+  const fam = ALL_FAMILIES[fi];
+  for (let v=0; v<VARIANTS; v++){
+    const n = fi*VARIANTS + v + 1, id = String(n).padStart(3,'0');
+    const P = paletteFor(fam, n);
+    const font = FONTS[(n + fi) % FONTS.length];
     const c = {
       id, n, v, fi, fam, P, font:font.v, fontLabel:font.label,
       plan: fam.plans[v], deco: fam.decos[v],
-      tag: TAGS[(fi*3 + v*2) % TAGS.length]
+      tag: TAGS[(n*3 + fi) % TAGS.length]
     };
     const { h, body } = fam.render(c);
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 ${h}" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="${font.v}">\n  ${body.trim()}\n</svg>`;
+    const raw = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 ${h}" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="${font.v}">\n  ${body.trim()}\n</svg>`;
+    const svg = stripMeta(raw);
     const anims = (svg.match(/<animate(?:Transform|Motion)?\b/gi) || []).length;
 
     fs.writeFileSync(path.join(STYLES_DIR, id + '.svg'), svg + '\n', 'utf8');
@@ -88,7 +112,7 @@ for (let fi=0; fi<FAMILIES.length; fi++){
 }
 
 fs.writeFileSync(path.join(STYLES_DIR, 'catalog.json'),
-  JSON.stringify({ version:'0.2.0', generated:'100 styles / 10 families × 10 variants',
+  JSON.stringify({ version:'0.3.0', generated:'100 styles / 20 composition prototypes × 5 variants',
                    contract:'WeChat MP SVG whitelist · no id/class/style/defs/filter/gradient · SMIL only',
                    lines:LINES, items:catalog.map(({svg, ...rest})=>rest) }, null, 2) + '\n', 'utf8');
 
@@ -152,12 +176,12 @@ for (const it of catalog){
 }
 const uniqueSvg = new Set(catalog.map(x=>x.svg)).size;
 const uniquePalette = new Set(catalog.map(x=>JSON.stringify(x.palette))).size;
-console.log('生成 ' + catalog.length + ' 个风格 · ' + Object.keys(byFam).length + ' 个流派');
-console.log('结构唯一 SVG: ' + uniqueSvg + '/100 · 唯一色板: ' + uniquePalette + '/100');
+console.log('生成 ' + catalog.length + ' 个风格 · ' + Object.keys(byFam).length + ' 个构图原型 · 每原型 ' + VARIANTS + ' 变体');
+console.log('结构唯一 SVG: ' + uniqueSvg + '/' + catalog.length + ' · 唯一色板: ' + uniquePalette + '/' + catalog.length + ' · 删除设计说明文字 ' + metaRemoved + ' 处');
 console.log('字体分布 ' + JSON.stringify(byFont) + ' · 正文动效 ' + JSON.stringify(byPlan));
 console.log('装饰动效 ' + JSON.stringify(byDeco));
 const svgBytes = catalog.reduce((n,x)=>n+Buffer.byteLength(x.svg,'utf8'),0);
 console.log('总字节 ' + (svgBytes/1024).toFixed(1) + ' KiB (UTF-8) · 动画标签 ' + catalog.reduce((n,x)=>n+x.animations,0));
 console.log('index.html ' + (fs.statSync(INDEX).size/1024).toFixed(1) + ' KiB');
-console.log(failures ? `\n${failures} 个风格校验失败` : '\n100/100 全部通过白名单 + 静态自洽 + 原文完整校验');
-if (failures || uniqueSvg !== 100) process.exitCode = 1;
+console.log(failures ? `\n${failures} 个风格校验失败` : `\n${catalog.length}/${catalog.length} 全部通过白名单 + 静态自洽 + 原文完整校验`);
+if (failures || uniqueSvg !== catalog.length || uniquePalette !== catalog.length) process.exitCode = 1;

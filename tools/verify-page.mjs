@@ -68,7 +68,7 @@ const stat = () => get('wholeStat').textContent;
 const preview = () => get('wholePreview').innerHTML;
 
 ck('100 个 SVG 源码块已回填', prefilled === 100, '实测 ' + prefilled);
-ck('目录显示 10 个流派 + 全部', (get('familyBar').innerHTML.match(/class="fam"/g) || []).length === 11);
+ck('目录显示 20 个构图原型 + 全部', (get('familyBar').innerHTML.match(/class="fam"/g) || []).length === 21);
 ck('初始渲染 12 张卡片（分页懒渲染）', cardCount() === 12, '实测 ' + cardCount());
 ck('分页控件共 9 页', (get('pager').innerHTML.match(/data-p="\d+"/g) || []).length === 11,
    '9 页码 + 上/下一页');
@@ -105,7 +105,7 @@ ck('静止终态下正文仍完整', preview().indexOf('先看看审美如何') 
 
 /* 联动：流派筛选 */
 get('familyBar').fire('click', { target: { closest: () => ({ dataset: { f: 'swiss' } }) } });
-ck('筛选瑞士网格后剩 10 个风格', cardCount() === 10 && get('familyBar').innerHTML.indexOf('当前 10 个风格') >= 0,
+ck('筛选瑞士网格后剩 5 个风格', cardCount() === 5 && get('familyBar').innerHTML.indexOf('当前 5 个风格') >= 0,
    '实测 ' + cardCount());
 ck('筛选后全文范围仍可选', get('wholeStat').textContent.length > 0);
 

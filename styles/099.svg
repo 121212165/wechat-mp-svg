@@ -1,16 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="Georgia,'Songti SC','SimSun',serif">
-  <rect x="0" y="0" width="680" height="440" fill="#F6F3EA"/>
-  <rect x="80" y="64" width="1" height="328" fill="#CFC7B2"><animate attributeName="height" values="0;328" dur="0.9s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
-  <text x="112" y="76" font-size="11" fill="#6F675A" letter-spacing="2">N O T E   /   099</text>
-  <text x="624" y="76" font-size="11" fill="#6F675A" text-anchor="end">HY 4 · SVG LAB</text>
-  <line x1="112" y1="96" x2="624" y2="96" stroke="#CFC7B2" stroke-width="1"/>
-  <text x="112" y="152" font-size="20" fill="#1C1A17">我发现 HY 4 svg 能力不错<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.10s" fill="freeze"/></text>
-  <text x="112" y="192" font-size="20" fill="#1C1A17">我想做一个公众号是 svg skills<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.20s" fill="freeze"/></text>
-  <text x="112" y="232" font-size="20" fill="#1C1A17">我是一个 svg 小白<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.30s" fill="freeze"/></text>
-  <text x="112" y="272" font-size="20" fill="#1C1A17">所以不去评价能力如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.40s" fill="freeze"/></text>
-  <text x="112" y="312" font-size="20" fill="#0E9F6E" font-weight="600">先看看审美如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.50s" fill="freeze"/></text>
-  <text x="112" y="352" font-size="20" fill="#1C1A17">我让他做了两三个风格<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.60s" fill="freeze"/></text>
-  <rect x="112" y="392" width="8" height="8" fill="#0E9F6E"/>
-  <text x="132" y="400" font-size="11" fill="#6F675A">配置 #0E9F6E · 布局 单栏笔记流 · 动画 fade</text>
-  <text x="624" y="400" font-size="11" fill="#6F675A" text-anchor="end">099 / 100</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="Consolas,Menlo,'Courier New',monospace">
+  <rect x="0" y="0" width="680" height="320" fill="#FAF7F2"/>
+  <rect x="0" y="0" width="680" height="18" fill="#8B5CF6"><animate attributeName="width" values="0;680" dur="0.7s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
+  <rect x="0" y="302" width="680" height="18" fill="#241D14"/>
+  <rect x="0" y="60" width="680" height="8" fill="#EEE6D8" transform="rotate(-2 340 64)"/>
+  <line x1="350" y1="40" x2="350" y2="280" stroke="#E0D5C2" stroke-width="1"/>
+  <text x="40" y="52" font-size="12" fill="#7E6E5B">01 — 03<animate attributeName="opacity" values="0;1" dur="0.6s" begin="0s" fill="freeze"/></text>
+  <text x="374" y="52" font-size="12" fill="#7E6E5B">04 — 06<animate attributeName="opacity" values="0;1" dur="0.6s" begin="0s" fill="freeze"/></text>
+  <text x="40" y="108" font-size="15" fill="#241D14">我发现 HY 4 svg 能力不错<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.18s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="40" y="174" font-size="15" fill="#241D14">我想做一个公众号是 svg skills<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.26s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="40" y="240" font-size="15" fill="#241D14">我是一个 svg 小白<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.34s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="374" y="108" font-size="15" fill="#241D14">所以不去评价能力如何<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.42s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="374" y="174" font-size="15" fill="#8B5CF6" font-weight="600">先看看审美如何<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.50s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="374" y="240" font-size="15" fill="#241D14">我让他做了两三个风格<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.58s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
 </svg>

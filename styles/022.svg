@@ -1,22 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 500" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
-  <rect x="0" y="0" width="680" height="500" fill="#0A1418"/>
-  <g><rect x="12" y="60" width="6" height="1" fill="#242424"/><rect x="662" y="60" width="6" height="1" fill="#242424"/><rect x="12" y="90" width="6" height="1" fill="#242424"/><rect x="662" y="90" width="6" height="1" fill="#242424"/><rect x="12" y="120" width="6" height="1" fill="#242424"/><rect x="662" y="120" width="6" height="1" fill="#242424"/><rect x="12" y="150" width="6" height="1" fill="#242424"/><rect x="662" y="150" width="6" height="1" fill="#242424"/><rect x="12" y="180" width="6" height="1" fill="#242424"/><rect x="662" y="180" width="6" height="1" fill="#242424"/><rect x="12" y="210" width="6" height="1" fill="#242424"/><rect x="662" y="210" width="6" height="1" fill="#242424"/><rect x="12" y="240" width="6" height="1" fill="#242424"/><rect x="662" y="240" width="6" height="1" fill="#242424"/><rect x="12" y="270" width="6" height="1" fill="#242424"/><rect x="662" y="270" width="6" height="1" fill="#242424"/><rect x="12" y="300" width="6" height="1" fill="#242424"/><rect x="662" y="300" width="6" height="1" fill="#242424"/><rect x="12" y="330" width="6" height="1" fill="#242424"/><rect x="662" y="330" width="6" height="1" fill="#242424"/><rect x="12" y="360" width="6" height="1" fill="#242424"/><rect x="662" y="360" width="6" height="1" fill="#242424"/><rect x="12" y="390" width="6" height="1" fill="#242424"/><rect x="662" y="390" width="6" height="1" fill="#242424"/></g>
-  <rect x="32" y="28" width="616" height="444" rx="7" fill="#191D26" stroke="#242424" stroke-width="1"/>
-  <circle cx="56" cy="54" r="5" fill="#242424"/><circle cx="74" cy="54" r="5" fill="#242424"/><circle cx="92" cy="54" r="5" fill="#FF6B35"/>
-  <text x="340" y="58" font-size="11" fill="#9096A6" text-anchor="middle" font-family="Consolas, Menlo, monospace">hy4 / terminal / 022</text>
-  <text x="628" y="58" font-size="11" fill="#FF6B35" text-anchor="end" font-family="Consolas, Menlo, monospace">● LIVE</text>
-  <line x1="32" y1="80" x2="648" y2="80" stroke="#242424" stroke-width="1"/>
-  <rect x="56" y="98" width="568" height="3" fill="#242424"/>
-  <rect x="56" y="98" width="568" height="3" fill="#FF6B35"><animate attributeName="width" values="0;568" dur="0.7s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
-  <text x="56" y="130" font-size="12" fill="#9096A6" font-family="Consolas, Menlo, monospace">$ style --id 022 --variant 1</text>
-  <text x="56" y="152" font-size="12" fill="#FF6B35" font-family="Consolas, Menlo, monospace">→ 先看审美，不做能力评价</text>
-  <line x1="56" y1="168" x2="624" y2="168" stroke="#242424" stroke-width="1"/>
-  <text x="56" y="188" font-size="10" fill="#9096A6" font-family="Consolas, Menlo, monospace">OUTPUT / 原文照录</text>
-  <text x="56" y="222" font-size="15" fill="#F2F2F5" font-family="Consolas, Menlo, monospace">我发现 HY 4 svg 能力不错<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.25s" fill="freeze"/></text>
-  <text x="56" y="252" font-size="15" fill="#F2F2F5" font-family="Consolas, Menlo, monospace">我想做一个公众号是 svg skills<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.32s" fill="freeze"/></text>
-  <text x="56" y="282" font-size="15" fill="#F2F2F5" font-family="Consolas, Menlo, monospace">我是一个 svg 小白<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.39s" fill="freeze"/></text>
-  <text x="56" y="312" font-size="15" fill="#F2F2F5" font-family="Consolas, Menlo, monospace">所以不去评价能力如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.46s" fill="freeze"/></text>
-  <text x="56" y="342" font-size="15" fill="#FF6B35" font-weight="600" font-family="Consolas, Menlo, monospace">先看看审美如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.53s" fill="freeze"/></text>
-  <text x="56" y="372" font-size="15" fill="#F2F2F5" font-family="Consolas, Menlo, monospace">我让他做了两三个风格<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.60s" fill="freeze"/></text>
-  <text x="624" y="448" font-size="10" fill="#9096A6" text-anchor="end" font-family="Consolas, Menlo, monospace">022 / 100</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="Consolas,Menlo,'Courier New',monospace">
+  <rect x="0" y="0" width="680" height="460" fill="#F8FAF9"/>
+  <circle cx="548" cy="124" r="76" fill="#2F6B4F"><animateTransform attributeName="transform" type="rotate" values="0 548 124;360 548 124" dur="1.4s" begin="0s" fill="freeze"/></circle>
+  <rect x="0" y="416" width="95" height="44" fill="#9FC5AF"><animate attributeName="width" values="0;95" dur="0.8s" begin="0.1s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
+  <rect x="472" y="208" width="152" height="6" fill="#1B2B24"/>
+  <path d="M 470 436 L 560 350 L 650 436 Z" fill="#9FC5AF"><animate attributeName="width" values="0;95" dur="0.7s" begin="0.15s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></path>
+  <text x="48" y="72" font-size="11" fill="#6E8579" letter-spacing="2">BAUHAUS / FORM 022</text>
+  <text x="48" y="132" font-size="40" fill="#1B2B24" font-weight="700">先看审美<animateTransform attributeName="transform" type="translate" values="0 18;0 0" dur="0.55s" begin="0.05s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <rect x="48" y="146" width="120" height="4" fill="#2F6B4F"/>
+  <text x="48" y="196" font-size="17" fill="#1B2B24">我发现 HY 4 svg 能力不错<animateTransform attributeName="transform" type="translate" values="0 18;0 0" dur="0.55s" begin="0.20s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="48" y="230" font-size="17" fill="#1B2B24">我想做一个公众号是 svg skills<animateTransform attributeName="transform" type="translate" values="0 18;0 0" dur="0.55s" begin="0.27s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="48" y="264" font-size="17" fill="#1B2B24">我是一个 svg 小白<animateTransform attributeName="transform" type="translate" values="0 18;0 0" dur="0.55s" begin="0.34s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="48" y="298" font-size="17" fill="#1B2B24">所以不去评价能力如何<animateTransform attributeName="transform" type="translate" values="0 18;0 0" dur="0.55s" begin="0.41s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="48" y="332" font-size="17" fill="#2F6B4F" font-weight="600">先看看审美如何<animateTransform attributeName="transform" type="translate" values="0 18;0 0" dur="0.55s" begin="0.48s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="48" y="366" font-size="17" fill="#1B2B24">我让他做了两三个风格<animateTransform attributeName="transform" type="translate" values="0 18;0 0" dur="0.55s" begin="0.55s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  
+  
 </svg>

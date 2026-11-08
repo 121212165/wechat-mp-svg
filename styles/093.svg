@@ -1,16 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
-  <rect x="0" y="0" width="680" height="440" fill="#FAF7F2"/>
-  <rect x="80" y="64" width="1" height="316" fill="#E0D5C2"><animate attributeName="height" values="0;316" dur="0.9s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
-  <text x="112" y="76" font-size="11" fill="#7E6E5B" letter-spacing="2">N O T E   /   093</text>
-  <text x="624" y="76" font-size="11" fill="#7E6E5B" text-anchor="end">HY 4 · SVG LAB</text>
-  <line x1="112" y1="96" x2="624" y2="96" stroke="#E0D5C2" stroke-width="1"/>
-  <text x="112" y="152" font-size="20" fill="#241D14">我发现 HY 4 svg 能力不错<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.10s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
-  <text x="112" y="192" font-size="20" fill="#241D14">我想做一个公众号是 svg skills<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.20s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
-  <text x="112" y="232" font-size="20" fill="#241D14">我是一个 svg 小白<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.30s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
-  <text x="112" y="272" font-size="20" fill="#241D14">所以不去评价能力如何<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.40s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
-  <text x="112" y="312" font-size="20" fill="#B4462F" font-weight="600">先看看审美如何<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.50s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
-  <text x="112" y="352" font-size="20" fill="#241D14">我让他做了两三个风格<animateTransform attributeName="transform" type="translate" values="0 12;0 0" dur="0.55s" begin="0.60s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
-  <rect x="112" y="392" width="8" height="8" fill="#B4462F"/>
-  <text x="132" y="400" font-size="11" fill="#7E6E5B">配置 #B4462F · 布局 单栏笔记流 · 动画 slide</text>
-  <text x="624" y="400" font-size="11" fill="#7E6E5B" text-anchor="end">093 / 100</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 540" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+  <rect x="0" y="0" width="680" height="540" fill="#E6EEF7"/>
+  <line x1="0" y1="56" x2="680" y2="56" stroke="#D6E1EE" stroke-width="1"/>
+  <g transform="rotate(-3 192 158)"><rect x="52" y="96" width="290" height="124" fill="#F5F8FC" stroke="#D6E1EE" stroke-width="1"><animate attributeName="opacity" values="0;1" dur="0.7s" begin="0.00s" fill="freeze"/></rect><rect x="172" y="88" width="52" height="16" fill="#8B5CF6"/></g>
+  <g transform="rotate(2 440 272)"><rect x="300" y="210" width="290" height="124" fill="#E6EEF7" stroke="#D6E1EE" stroke-width="1"><animate attributeName="opacity" values="0;1" dur="0.7s" begin="0.12s" fill="freeze"/></rect><rect x="420" y="202" width="52" height="16" fill="#8B5CF6"/></g>
+  <g transform="rotate(-2 290 398)"><rect x="150" y="336" width="290" height="124" fill="#F5F8FC" stroke="#D6E1EE" stroke-width="1"><animate attributeName="opacity" values="0;1" dur="0.7s" begin="0.24s" fill="freeze"/></rect><rect x="270" y="328" width="52" height="16" fill="#8B5CF6"/></g>
+  <text x="72" y="148" font-size="14" fill="#16283B" transform="rotate(-3 72 148)">我发现 HY 4 svg 能力不错<animate attributeName="x" values="36;72" dur="0.55s" begin="0.18s" fill="freeze"/></text>
+  <text x="72" y="188" font-size="14" fill="#16283B" transform="rotate(-3 72 188)">我想做一个公众号是 svg skills<animate attributeName="x" values="36;72" dur="0.55s" begin="0.27s" fill="freeze"/></text>
+  <text x="320" y="262" font-size="14" fill="#16283B" transform="rotate(2 320 262)">我是一个 svg 小白<animate attributeName="x" values="284;320" dur="0.55s" begin="0.36s" fill="freeze"/></text>
+  <text x="320" y="302" font-size="14" fill="#16283B" transform="rotate(2 320 302)">所以不去评价能力如何<animate attributeName="x" values="284;320" dur="0.55s" begin="0.45s" fill="freeze"/></text>
+  <text x="170" y="388" font-size="14" fill="#8B5CF6" transform="rotate(-2 170 388)" font-weight="600">先看看审美如何<animate attributeName="x" values="134;170" dur="0.55s" begin="0.54s" fill="freeze"/></text>
+  <text x="170" y="428" font-size="14" fill="#16283B" transform="rotate(-2 170 428)">我让他做了两三个风格<animate attributeName="x" values="134;170" dur="0.55s" begin="0.63s" fill="freeze"/></text>
 </svg>
