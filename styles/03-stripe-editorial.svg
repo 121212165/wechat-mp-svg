@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+  <rect x="0" y="0" width="680" height="460" fill="#F7F5F1"/>
+  <rect x="0" y="0" width="680" height="6" fill="#635BFF"/>
+
+  <text x="48" y="148" font-size="76" fill="#DCD5C9" font-family="Georgia, Songti SC, SimSun, serif">01<animate attributeName="opacity" values="0;1" dur="0.7s" begin="0s" fill="freeze"/></text>
+  <line x1="48" y1="168" x2="48" y2="344" stroke="#DCD5C9" stroke-width="1"/>
+  <text x="48" y="196" font-size="10" fill="#A89E8E">S T Y L E   N o . 0 3</text>
+  <text x="48" y="230" font-size="12" fill="#8C8172">配置</text>
+  <text x="48" y="254" font-size="12" fill="#8C8172">布局</text>
+  <text x="48" y="278" font-size="12" fill="#8C8172">动画</text>
+  <rect x="48" y="300" width="16" height="3" fill="#635BFF"/>
+
+  <text x="232" y="84" font-size="11" fill="#A89E8E">HY 4 · SVG LAB</text>
+  <text x="624" y="84" font-size="11" fill="#A89E8E" text-anchor="end">03 / 03</text>
+  <text x="232" y="140" font-size="38" fill="#23201B" font-family="Georgia, Songti SC, SimSun, serif">先看审美<animate attributeName="opacity" values="0;1" dur="0.7s" begin="0.10s" fill="freeze"/></text>
+  <rect x="232" y="156" width="176" height="3" fill="#635BFF"><animate attributeName="width" values="0;176" dur="0.8s" begin="0.20s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
+
+  <text x="232" y="202" font-size="16" fill="#4A443C">我发现 HY 4 svg 能力不错<animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.35s" fill="freeze"/></text>
+  <text x="232" y="236" font-size="16" fill="#4A443C">我想做一个公众号是 svg skills<animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.45s" fill="freeze"/></text>
+  <text x="232" y="270" font-size="16" fill="#4A443C">我是一个 svg 小白<animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.55s" fill="freeze"/></text>
+  <text x="232" y="304" font-size="16" fill="#4A443C">所以不去评价能力如何<animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.65s" fill="freeze"/></text>
+  <text x="232" y="338" font-size="16" fill="#635BFF" font-weight="600">先看看审美如何<animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.75s" fill="freeze"/></text>
+  <text x="232" y="372" font-size="16" fill="#4A443C">我让他做了两三个风格<animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.85s" fill="freeze"/></text>
+
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 16;0 0" dur="0.6s" begin="0.95s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/>
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.95s" fill="freeze"/>
+    <rect x="232" y="412" width="120" height="2" fill="#635BFF"/>
+    <text x="232" y="434" font-size="10" fill="#8C8172">配置 / 60-30-10</text>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 16;0 0" dur="0.6s" begin="1.05s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/>
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="1.05s" fill="freeze"/>
+    <rect x="372" y="412" width="120" height="2" fill="#DCD5C9"/>
+    <text x="372" y="434" font-size="10" fill="#8C8172">布局 / 非对称双栏</text>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 16;0 0" dur="0.6s" begin="1.15s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/>
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="1.15s" fill="freeze"/>
+    <rect x="512" y="412" width="120" height="2" fill="#DCD5C9"/>
+    <text x="512" y="434" font-size="10" fill="#8C8172">动画 / translate</text>
+  </g>
+</svg>
