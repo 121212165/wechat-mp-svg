@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <rect x="0" y="0" width="680" height="460" fill="#FDF7FA"/>
+  <rect x="0" y="0" width="680" height="16" fill="#5B8C00"><animate attributeName="opacity" values="0;1" dur="0.7s" begin="0s" fill="freeze"/></rect>
+  <g><line x1="126" y1="76" x2="126" y2="404" stroke="#EBD7E2" stroke-width="1"/><line x1="211" y1="76" x2="211" y2="404" stroke="#EBD7E2" stroke-width="1"/><line x1="297" y1="76" x2="297" y2="404" stroke="#EBD7E2" stroke-width="1"/><line x1="383" y1="76" x2="383" y2="404" stroke="#EBD7E2" stroke-width="1"/><line x1="469" y1="76" x2="469" y2="404" stroke="#EBD7E2" stroke-width="1"/><line x1="554" y1="76" x2="554" y2="404" stroke="#EBD7E2" stroke-width="1"/></g>
+  <text x="40" y="72" font-size="11" fill="#8A6A7E" letter-spacing="2">SWISS GRID / 009</text>
+  <text x="640" y="72" font-size="11" fill="#8A6A7E" text-anchor="end">HY 4 · SVG LAB</text>
+  <text x="40" y="156" font-size="62" fill="#EBD7E2" font-family="Georgia, Songti SC, SimSun, serif" font-weight="700">09<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0s" fill="freeze"/></text>
+  <line x1="40" y1="170" x2="640" y2="170" stroke="#33152A" stroke-width="1"/>
+  <text x="68" y="190" font-size="21" fill="#33152A">我发现 HY 4 svg 能力不错<animateTransform attributeName="transform" type="translate" values="0 16;0 0" dur="0.55s" begin="0.12s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="68" y="230" font-size="21" fill="#33152A">我想做一个公众号是 svg skills<animateTransform attributeName="transform" type="translate" values="0 16;0 0" dur="0.55s" begin="0.19s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="68" y="270" font-size="21" fill="#33152A">我是一个 svg 小白<animateTransform attributeName="transform" type="translate" values="0 16;0 0" dur="0.55s" begin="0.26s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="68" y="310" font-size="21" fill="#33152A">所以不去评价能力如何<animateTransform attributeName="transform" type="translate" values="0 16;0 0" dur="0.55s" begin="0.33s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="68" y="350" font-size="21" fill="#5B8C00" font-weight="600">先看看审美如何<animateTransform attributeName="transform" type="translate" values="0 16;0 0" dur="0.55s" begin="0.40s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <text x="68" y="390" font-size="21" fill="#33152A">我让他做了两三个风格<animateTransform attributeName="transform" type="translate" values="0 16;0 0" dur="0.55s" begin="0.47s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></text>
+  <rect x="40" y="416" width="176" height="4" fill="#5B8C00"/>
+  <text x="40" y="440" font-size="10" fill="#8A6A7E">配置 60-30-10 · 布局 7 栏网格 · 动画 slide</text>
+  <text x="640" y="440" font-size="10" fill="#8A6A7E" text-anchor="end">009 / 100</text>
+</svg>

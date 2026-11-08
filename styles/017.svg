@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+  <rect x="0" y="0" width="680" height="480" fill="#FFF8F0"/>
+  <rect x="0" y="0" width="6" height="480" fill="#5B8C00"><animate attributeName="opacity" values="0;1" dur="0.7s" begin="0s" fill="freeze"/></rect>
+  <text x="48" y="98" font-size="74" fill="#EBD5BE" font-family="Georgia, Songti SC, SimSun, serif">17<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0s" fill="freeze"/></text>
+  <line x1="198" y1="64" x2="198" y2="404" stroke="#EBD5BE" stroke-width="1"/>
+  <text x="48" y="196" font-size="11" fill="#8A7563">S T Y L E   N o . 017</text>
+  <text x="48" y="258" font-size="12" fill="#2B2118">配置</text>
+  <text x="48" y="282" font-size="12" fill="#2B2118">布局</text>
+  <text x="48" y="306" font-size="12" fill="#2B2118">动画</text>
+  <rect x="48" y="330" width="16" height="3" fill="#5B8C00"/>
+  <text x="254" y="108" font-size="11" fill="#8A7563">HY 4 · SVG LAB</text>
+  <text x="254" y="154" font-size="34" fill="#2B2118" font-family="Georgia, Songti SC, SimSun, serif">先看审美<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.08s" fill="freeze"/></text>
+  <rect x="254" y="166" width="206" height="3" fill="#5B8C00"><animate attributeName="width" values="0;206" dur="0.7s" begin="0.2s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
+  <text x="254" y="200" font-size="16" fill="#2B2118" font-family="Georgia, Songti SC, SimSun, serif">我发现 HY 4 svg 能力不错<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.30s" fill="freeze"/></text>
+  <text x="254" y="234" font-size="16" fill="#2B2118" font-family="Georgia, Songti SC, SimSun, serif">我想做一个公众号是 svg skills<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.37s" fill="freeze"/></text>
+  <text x="254" y="268" font-size="16" fill="#2B2118" font-family="Georgia, Songti SC, SimSun, serif">我是一个 svg 小白<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.44s" fill="freeze"/></text>
+  <text x="254" y="302" font-size="16" fill="#2B2118" font-family="Georgia, Songti SC, SimSun, serif">所以不去评价能力如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.51s" fill="freeze"/></text>
+  <text x="254" y="336" font-size="16" fill="#5B8C00" font-weight="600" font-family="Georgia, Songti SC, SimSun, serif">先看看审美如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.58s" fill="freeze"/></text>
+  <text x="254" y="370" font-size="16" fill="#2B2118" font-family="Georgia, Songti SC, SimSun, serif">我让他做了两三个风格<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.65s" fill="freeze"/></text>
+  <rect x="254" y="420" width="120" height="3" fill="#5B8C00"/>
+  <rect x="394" y="420" width="120" height="3" fill="#EBD5BE"/>
+  <rect x="534" y="420" width="120" height="3" fill="#EBD5BE"/>
+  <text x="254" y="450" font-size="10" fill="#8A7563">配置 60-30-10 · 布局 非对称双栏 · 动画 fade</text>
+  <text x="632" y="450" font-size="10" fill="#8A7563" text-anchor="end">017 / 100</text>
+</svg>

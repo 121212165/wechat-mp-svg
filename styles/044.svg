@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+  <rect x="0" y="0" width="680" height="460" fill="#F6F3EA"/>
+  <circle cx="574" cy="108" r="104" fill="#635BFF"><animateTransform attributeName="transform" type="rotate" values="0 574 108;360 574 108" dur="1.4s" begin="0s" fill="freeze"/></circle>
+  <rect x="0" y="416" width="109" height="44" fill="#1D4E89"><animate attributeName="width" values="0;109" dur="0.8s" begin="0.1s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
+  <rect x="470" y="220" width="208" height="6" fill="#1C1A17"/>
+  <path d="M 470 416 L 560 330 L 650 416 Z" fill="#1D4E89"><animate attributeName="opacity" values="0;1" dur="0.7s" begin="0.15s" fill="freeze"/></path>
+  <text x="48" y="72" font-size="11" fill="#6F675A" letter-spacing="2">BAUHAUS / FORM 044</text>
+  <text x="48" y="132" font-size="44" fill="#1C1A17" font-weight="700">先看审美<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.05s" fill="freeze"/></text>
+  <rect x="48" y="146" width="120" height="4" fill="#635BFF"/>
+  <text x="48" y="196" font-size="17" fill="#1C1A17">我发现 HY 4 svg 能力不错<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.20s" fill="freeze"/></text>
+  <text x="48" y="230" font-size="17" fill="#1C1A17">我想做一个公众号是 svg skills<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.27s" fill="freeze"/></text>
+  <text x="48" y="264" font-size="17" fill="#1C1A17">我是一个 svg 小白<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.34s" fill="freeze"/></text>
+  <text x="48" y="298" font-size="17" fill="#1C1A17">所以不去评价能力如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.41s" fill="freeze"/></text>
+  <text x="48" y="332" font-size="17" fill="#635BFF" font-weight="600">先看看审美如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.48s" fill="freeze"/></text>
+  <text x="48" y="366" font-size="17" fill="#1C1A17">我让他做了两三个风格<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.55s" fill="freeze"/></text>
+  <text x="48" y="416" font-size="10" fill="#6F675A">配置 原色三色块 · 布局 几何叠压 · 动画 fade</text>
+  <text x="632" y="416" font-size="10" fill="#6F675A" text-anchor="end">044 / 100</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <rect x="0" y="0" width="680" height="460" fill="#FBFAF9"/>
+  <rect x="0" y="0" width="680" height="8" fill="#B4462F"><animate attributeName="width" values="0;680" dur="0.7s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
+  <g><line x1="190" y1="76" x2="190" y2="404" stroke="#E7E5E4" stroke-width="1"/><line x1="340" y1="76" x2="340" y2="404" stroke="#E7E5E4" stroke-width="1"/><line x1="490" y1="76" x2="490" y2="404" stroke="#E7E5E4" stroke-width="1"/></g>
+  <text x="40" y="72" font-size="11" fill="#78716C" letter-spacing="2">SWISS GRID / 001</text>
+  <text x="640" y="72" font-size="11" fill="#78716C" text-anchor="end">HY 4 · SVG LAB</text>
+  <text x="40" y="156" font-size="62" fill="#E7E5E4" font-family="Georgia, Songti SC, SimSun, serif" font-weight="700">01<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0s" fill="freeze"/></text>
+  <line x1="40" y1="170" x2="640" y2="170" stroke="#292524" stroke-width="1"/>
+  <text x="40" y="190" font-size="17" fill="#292524">我发现 HY 4 svg 能力不错<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.12s" fill="freeze"/></text>
+  <text x="40" y="226" font-size="17" fill="#292524">我想做一个公众号是 svg skills<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.19s" fill="freeze"/></text>
+  <text x="40" y="262" font-size="17" fill="#292524">我是一个 svg 小白<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.26s" fill="freeze"/></text>
+  <text x="40" y="298" font-size="17" fill="#292524">所以不去评价能力如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.33s" fill="freeze"/></text>
+  <text x="40" y="334" font-size="17" fill="#B4462F" font-weight="600">先看看审美如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.40s" fill="freeze"/></text>
+  <text x="40" y="370" font-size="17" fill="#292524">我让他做了两三个风格<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.47s" fill="freeze"/></text>
+  <rect x="40" y="416" width="80" height="4" fill="#B4462F"/>
+  <text x="40" y="440" font-size="10" fill="#78716C">配置 60-30-10 · 布局 4 栏网格 · 动画 fade</text>
+  <text x="640" y="440" font-size="10" fill="#78716C" text-anchor="end">001 / 100</text>
+</svg>

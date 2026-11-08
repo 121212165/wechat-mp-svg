@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="Georgia,'Songti SC','SimSun',serif">
+  <rect x="0" y="0" width="680" height="440" fill="#F5F8FC"/>
+  <rect x="56" y="64" width="1" height="312" fill="#D6E1EE"><animate attributeName="height" values="0;312" dur="0.9s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
+  <text x="88" y="76" font-size="11" fill="#6D8299" letter-spacing="2">N O T E   /   091</text>
+  <text x="624" y="76" font-size="11" fill="#6D8299" text-anchor="end">HY 4 · SVG LAB</text>
+  <line x1="88" y1="96" x2="624" y2="96" stroke="#D6E1EE" stroke-width="1"/>
+  <text x="88" y="152" font-size="18" fill="#16283B">我发现 HY 4 svg 能力不错<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.10s" fill="freeze"/></text>
+  <text x="88" y="192" font-size="18" fill="#16283B">我想做一个公众号是 svg skills<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.20s" fill="freeze"/></text>
+  <text x="88" y="232" font-size="18" fill="#16283B">我是一个 svg 小白<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.30s" fill="freeze"/></text>
+  <text x="88" y="272" font-size="18" fill="#16283B">所以不去评价能力如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.40s" fill="freeze"/></text>
+  <text x="88" y="312" font-size="18" fill="#5B8C00" font-weight="600">先看看审美如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.50s" fill="freeze"/></text>
+  <text x="88" y="352" font-size="18" fill="#16283B">我让他做了两三个风格<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.60s" fill="freeze"/></text>
+  <rect x="88" y="392" width="8" height="8" fill="#5B8C00"/>
+  <text x="108" y="400" font-size="11" fill="#6D8299">配置 #5B8C00 · 布局 单栏笔记流 · 动画 fade</text>
+  <text x="624" y="400" font-size="11" fill="#6D8299" text-anchor="end">091 / 100</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" preserveAspectRatio="xMidYMin meet" style="display:block;" font-family="Georgia,'Songti SC','SimSun',serif">
+  <rect x="0" y="0" width="680" height="460" fill="#F6F3EA"/>
+  <rect x="0" y="0" width="680" height="8" fill="#8B5CF6"><animate attributeName="width" values="0;680" dur="0.7s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 1 0.5 1"/></rect>
+  <g><line x1="114" y1="76" x2="114" y2="404" stroke="#CFC7B2" stroke-width="1"/><line x1="179" y1="76" x2="179" y2="404" stroke="#CFC7B2" stroke-width="1"/><line x1="243" y1="76" x2="243" y2="404" stroke="#CFC7B2" stroke-width="1"/><line x1="308" y1="76" x2="308" y2="404" stroke="#CFC7B2" stroke-width="1"/><line x1="372" y1="76" x2="372" y2="404" stroke="#CFC7B2" stroke-width="1"/><line x1="437" y1="76" x2="437" y2="404" stroke="#CFC7B2" stroke-width="1"/><line x1="501" y1="76" x2="501" y2="404" stroke="#CFC7B2" stroke-width="1"/><line x1="566" y1="76" x2="566" y2="404" stroke="#CFC7B2" stroke-width="1"/></g>
+  <text x="50" y="72" font-size="11" fill="#6F675A" letter-spacing="2">SWISS GRID / 010</text>
+  <text x="630" y="72" font-size="11" fill="#6F675A" text-anchor="end">HY 4 · SVG LAB</text>
+  <text x="50" y="156" font-size="70" fill="#CFC7B2" font-family="Georgia, Songti SC, SimSun, serif" font-weight="700">10<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0s" fill="freeze"/></text>
+  <line x1="50" y1="170" x2="630" y2="170" stroke="#1C1A17" stroke-width="2"/>
+  <text x="50" y="198" font-size="17" fill="#1C1A17">我发现 HY 4 svg 能力不错<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.12s" fill="freeze"/></text>
+  <text x="50" y="234" font-size="17" fill="#1C1A17">我想做一个公众号是 svg skills<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.19s" fill="freeze"/></text>
+  <text x="50" y="270" font-size="17" fill="#1C1A17">我是一个 svg 小白<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.26s" fill="freeze"/></text>
+  <text x="50" y="306" font-size="17" fill="#1C1A17">所以不去评价能力如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.33s" fill="freeze"/></text>
+  <text x="50" y="342" font-size="17" fill="#8B5CF6" font-weight="600">先看看审美如何<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.40s" fill="freeze"/></text>
+  <text x="50" y="378" font-size="17" fill="#1C1A17">我让他做了两三个风格<animate attributeName="opacity" values="0;1" dur="0.55s" begin="0.47s" fill="freeze"/></text>
+  <rect x="50" y="416" width="188" height="4" fill="#8B5CF6"/>
+  <text x="50" y="440" font-size="10" fill="#6F675A">配置 60-30-10 · 布局 9 栏网格 · 动画 fade</text>
+  <text x="630" y="440" font-size="10" fill="#6F675A" text-anchor="end">010 / 100</text>
+</svg>
