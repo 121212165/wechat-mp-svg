@@ -156,7 +156,8 @@ console.log('生成 ' + catalog.length + ' 个风格 · ' + Object.keys(byFam).l
 console.log('结构唯一 SVG: ' + uniqueSvg + '/100 · 唯一色板: ' + uniquePalette + '/100');
 console.log('字体分布 ' + JSON.stringify(byFont) + ' · 正文动效 ' + JSON.stringify(byPlan));
 console.log('装饰动效 ' + JSON.stringify(byDeco));
-console.log('总字节 ' + (catalog.reduce((n,x)=>n+x.svg.length,0)/1024).toFixed(1) + ' KB · 动画标签 ' + catalog.reduce((n,x)=>n+x.animations,0));
-console.log('index.html ' + (fs.statSync(INDEX).size/1024).toFixed(1) + ' KB');
+const svgBytes = catalog.reduce((n,x)=>n+Buffer.byteLength(x.svg,'utf8'),0);
+console.log('总字节 ' + (svgBytes/1024).toFixed(1) + ' KiB (UTF-8) · 动画标签 ' + catalog.reduce((n,x)=>n+x.animations,0));
+console.log('index.html ' + (fs.statSync(INDEX).size/1024).toFixed(1) + ' KiB');
 console.log(failures ? `\n${failures} 个风格校验失败` : '\n100/100 全部通过白名单 + 静态自洽 + 原文完整校验');
 if (failures || uniqueSvg !== 100) process.exitCode = 1;

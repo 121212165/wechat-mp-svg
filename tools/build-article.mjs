@@ -50,7 +50,7 @@ const checks = [
 ];
 const fails = checks.filter(c => !c[1]);
 
-console.log('wechat-article.html  ' + (fs.statSync(outPath).size / 1024).toFixed(1) + ' KB');
+console.log('wechat-article.html  ' + (fs.statSync(outPath).size / 1024).toFixed(1) + ' KiB');
 console.log('正文 ' + frag.replace(/<[^>]*>/g, '').replace(/\s/g, '').length + ' 字 · ' +
             (frag.match(/<svg\b/gi) || []).length + ' 张 SVG · ' +
             (frag.match(/<animate(?:Transform|Motion)?\b/gi) || []).length + ' 个 SMIL 动画');

@@ -70,23 +70,23 @@ wechat-svg-skills/
 ```
 生成 100 个风格 · 10 个流派
 结构唯一 SVG: 100/100 · 唯一色板: 100/100
-总字节 384.1 KB · 动画标签 830
+总字节 397.1 KiB (UTF-8) · 动画标签 830
 100/100 全部通过白名单 + 静态自洽 + 原文完整校验
 ```
 
 ### 整篇一键复制（「整个 html 都要发公众号」）
 
 不能直接复制 `index.html` 源码：它含 JS、按钮、交互控件，粘进公众号会被清洗成空白。
-展示页会把整页内容**编译**成一份公众号安全版 HTML：全部内联样式、无 class / id / 外链、三张→一百张 SVG 原样嵌入。
+展示页会把整页内容**编译**成一份公众号安全版 HTML：全部内联样式、无 class / id / 外链、100 张 SVG 原样嵌入。
 主按钮用 `ClipboardItem` 同时写 `text/html` + `text/plain`，到编辑器 `Ctrl+V` 即成一篇完整图文。
 
 - 复制范围可选：**全部 100 个 / 当前筛选 / 当前页 12 个 / 仅收藏**（默认全部）。
 - 另有【复制全文 HTML 源码】【下载全文 .html】，供 `wechat-mp-html-source-helper` 或秀米 / 135 的 HTML 源码组件使用。
-- `wechat-article.html` 是同一套纯函数导出的落盘成品（492 KB / 100 张 SVG / 830 个动画），无 JS，可离线打开。
+- `wechat-article.html` 是同一套纯函数导出的落盘成品（492.4 KiB / 504,248 B / 100 张 SVG / 830 个动画），无 JS，可离线打开。
 - 展示页默认只把**前 6 张**塞进预览 DOM，避免 100 张 SMIL 动画同时播放；当前页也只渲染 12 张卡片。
 
-> **必须说清的体积风险**：完整范围约 **459–492 KB / 100 张 SVG**。微信编辑器对单篇长度与 SVG 数量有限制，
-> 一次粘贴 100 张极可能超时、截断或被清洗。页面在范围 > 12 张或 > 150 KB 时会显式红字警告，
+> **必须说清的体积风险**：完整范围 **492.4 KiB（504,248 B，UTF-8 字节）/ 100 张 SVG**。微信编辑器对单篇长度与 SVG 数量有限制，
+> 一次粘贴 100 张极可能超时、截断或被清洗。页面在范围 > 12 张或 > 150 KiB 时会显式红字警告（体积已改用 UTF-8 字节数；v0.2.0 误用 JS 字符数，中文内容低估约 13 KiB），
 > 建议先选「当前页 12 个」试粘验证通路，再分批发送。本仓库**未**在真实公众号账号下完成 100 张的粘贴验收。
 
 ### 客观验证（可复现，非肉眼自评）
@@ -116,7 +116,7 @@ wechat-svg-skills/
 | 4 | **yizhiyanhua-ai/fireworks-tech-graph** ⭐深入 | https://github.com/yizhiyanhua-ai/fireworks-tech-graph ／ https://skillsllm.com/skill/fireworks-tech-graph | 12 种技术图风格矩阵、JSON 生成器、SVG→PNG/GIF/HTML 多出口 | 风格矩阵 + 可执行 composition contract + "命令成功 ≠ 视觉合格" |
 | 5 | **kv0906/cc-skills · svg-art** | https://skillselion.com/skills/kv0906/cc-skills/svg-art | 8 个 Python 脚本程序化生成图标/网格/分形/波形/图表，`--seed` 可复现 | `--seed` 可复现 + `optimize_svg.py` 产物精简；说明"脚本生成"与"模型直写"是两条路线 |
 | 6 | **claudskills · svg**（DSL 信息图） | https://claudskills.com/skills/svg | 用紧凑 DSL 生成品牌感知 SVG 信息图，颜色从 brand pack 解析 | 配色不写死在技能里，从配置注入 —— 对应本 skill 的「配置」维度 |
-| 7 | **claudskills · delivery-svg-markdown** | https://claudskills.com/skills/delivery-svg-markdown | 纯静态 SVG 面板，内嵌 Markdown；**无 JS、无外部 CSS、无构建步骤、inline styles** | 与公众号约束高度同构：强约束环境里"自包含 + 内联样式"才有存活率 |
+| 7 | **claudskills · delivery-svg-markdown** | https://claudskills.com/skills/delivery-svg-markdown | 纯静态 SVG 面板，可嵌入 Markdown；**无 JS、无外部 CSS、无构建步骤、inline styles** | 与公众号约束高度同构：强约束环境里"自包含 + 内联样式"才有存活率 |
 
 补充参照：`skills.md` 的 `logo-design`（导出 vector SVG + usage notes + manifest，
 见 http://skills.md/）、`skills.sh` 注册表、`claudeskills.com` 目录。
@@ -165,7 +165,7 @@ Plan layout（inventory → grid → size-to-text → route connections → canv
   连线永远最后画，箭头不会被方块盖住；
 - **14 项结构检查**：方块重叠、文字溢出、箭头穿框、箭头穿字、marker 缺失、
   间距过紧、viewBox 不匹配、网格错位、层级违规等；
-- **退出码**：`0` pass / `1` warnings / `2` errors；配套 pytest + CI。
+- **退出码**：`0` pass / `1` warnings / `2` errors。（独立审核复核：该仓库 workflows / tests 均为空，早期「配套 pytest + CI」的转述无依据，已删除）
 
 **对本 skill 的取舍**：采纳「客观脚本校验 + 显式显示失败」这一层，落地为 `index.html`
 里的 `auditSVG()`；**弃用** `<defs>` 与分层 id（微信删除 id），
@@ -183,15 +183,15 @@ Plan layout（inventory → grid → size-to-text → route connections → canv
   节点间距 ≥40px、容器留白 ≥20px、标签不压节点/连线/分区标题。
 - **严格的文字策略**：`text_policy: "strict"` 时拒绝任何可见截断；
   默认 report 保留完整标签于 SVG 元数据，并报告截断警告。
-- **最值得抄的一句**：
-  > **「a successful command is not a visual quality verdict」**
-  > （命令跑通不等于视觉合格）
+- **最值得抄的态度**（语义转述，**非原文直引**）：该仓库 README 用
+  `Evaluate, don't assert` 与 `visual_review: skipped` 表达「命令跑通不等于视觉合格」；
+  早期转述把它加引号当作原文，独立审核已纠正。
   以及：「若无法查看渲染图，必须**显式标记视觉检查已跳过**，且不得声称视觉正确。」
 - **流程**：`validate` → `render` → `check` → `export-png`；
   `check` 校验 SVG 身份、marker 引用、通用碰撞、语义几何与构图；
   失败后用元素 ID 和几何做定点修复，两次无改善就换思路。
 
-**对本 skill 的取舍**：风格矩阵 → 本仓库 3 个 `styles/*.svg`；
+**对本 skill 的取舍**：风格矩阵 → 本仓库 100 个 `styles/*.svg`；
 composition contract → 白名单合规契约；
 **最重要的是态度**：本 skill 只声称"代码级合规自检通过"，
 **不声称审美更好，也不声称已在公众号发布验收**（见 §4）。
@@ -225,9 +225,9 @@ https://agskills.dev/en/yizhiyanhua-ai/fireworks-tech-graph/fireworks-tech-graph
 
 ## 2.1 机制：SVG 是被"整体放行"的命名空间
 
-微信编辑器 sanitize HTML，但 **`<svg>` 及其全部子元素整体放行**。
+微信编辑器 sanitize HTML；公开资料普遍把 SVG 描述为「**整体放行**」的命名空间（措辞见 §2.2.1 的冲突说明）。
 原因是 SVG 的 SMIL 声明式动画属于 W3C 规范、不需要 JS、不发起网络请求、不读写 DOM，
-安全风险可控；推测 sanitizer 只对 HTML 命名空间做深度解析。
+安全风险可控。yeyulingfeng §3.4 原文写的是「**可能**」只对 HTML 命名空间深度解析，属推测而非微信官方机制说明。
 Apple、小米、喜茶等品牌号长期使用 SVG 交互图文。
 
 来源：https://blog.waistu.com/archives/GH6ijd6e ／
@@ -254,6 +254,21 @@ https://cloud.tencent.com/developer/article/2739502
 来源：https://blog.waistu.com/archives/GH6ijd6e ／
 http://mp.weixin.qq.com/s?__biz=Mzg2NjcwMzk3Mg==&mid=2247517501&idx=1&sn=65330f8e2b679bbb222ddc7e8adc2cf5
 
+### 2.2.1 来源之间的冲突（此前未披露，现补）
+
+独立审核（2026-11-08）逐条复访后发现，本仓库引用的公开资料**互相矛盾**，此前只取了保守侧而未说明：
+
+| 议题 | 一方说法 | 另一方说法 | 本项目取舍 |
+| --- | --- | --- | --- |
+| `<foreignObject>` / 渐变 / `clip-path` | W3（yeyulingfeng）称实测可用并建议使用 | W1 / W2 将其列为常规手段；本仓库 `SKILL.md §2.1` 列为绝对禁止 | 取**保守侧**（不用），不会导致实际失效 |
+| `restart="never"` | W3 称 iOS 无效 | W4 草稿箱实测称可用 | 当前 100 张里该属性计数为 **0**，属空风险项 |
+| `<image>` base64 | W3 称不显示 | W7 称可用 | 不使用 `<image>` |
+| 「整体放行」 vs 「白名单过滤」 | W3 §3.1 描述为整体放行 | W1 描述为非白名单标签会被后台修改 | §2.1 与 §2.2 并列陈述，未解释两者关系 |
+
+**更重要的元约束限制**：以上来源**没有一份是微信官方文档**。W1 是 2022 年个人博客对 2021 版清单的转述，
+W2 是行业案例库（2025），清单距今 5 年，无 2026 年官方复核。因此「白名单在 2026 年仍有效」的置信度只能标 `[中]`。
+另外 W8（tsight）自述为「技术溯源与**逻辑推演**」，非实测，不能当事实引用。
+
 ## 2.3 会被删/会失效的东西
 
 | 类别 | 具体 |
@@ -267,7 +282,7 @@ http://mp.weixin.qq.com/s?__biz=Mzg2NjcwMzk3Mg==&mid=2247517501&idx=1&sn=65330f8
 
 来源：https://www.yeyulingfeng.com/626469.html §2.3 / §7 / §7.5 ／
 https://cloud.tencent.com/developer/article/2739502 §5 ／
-https://tsight.io/articles/11245390（风控边界）
+https://tsight.io/articles/11245390（风控边界；该文自述为逻辑推演，非实测，证据等级低）
 
 ## 2.4 一键复制为什么可行（三条真实路径）
 
@@ -306,7 +321,7 @@ https://tsight.io/articles/11245390（风控边界）
 # 三、审美考查：配置 / 布局 / 动画（6 处资源引用）
 
 用户要求「风格考查审美，主要是演示配置、布局和动画」。
-三个风格因此**共用同一段文案**，只在这三个维度上拉开差距。
+100 个风格因此**共用同一段文案**，差异落在配置 / 布局 / 动画三个维度上。
 
 ## 3.1 引用资源
 
@@ -314,31 +329,46 @@ https://tsight.io/articles/11245390（风控边界）
 | --- | --- | --- | --- |
 | R1 | **60-30-10 Rule**（UX Quest） | https://www.uxqst.com/ux-laws/60-30-10-rule | 三套配色比例：60% 中性主导 / 30% 结构次要 / 10% 单一强调；强调色需过 4.5:1 对比度；"眯眼测试"找主行动点。文中直接以 Stripe、Linear 为例 |
 | R2 | **配色公式与 HSL / Refactoring UI** | https://rar.design/posts/color-palette-formulas | Notion 红、Stripe 紫、Spotify 绿都守在 10% 以下（"注意力工程"）；主导色再切「真背景 / 容器背景」差 5–10% 明度堆层次；用 HSL 而非 HEX 思考调色 |
-| R3 | **Visual Design Standards**（catlog22/Claude-Code-Workflow） | https://github.com/catlog22/Claude-Code-Workflow/blob/main/.claude/skills/team-ux-improve/specs/design-standards.md | 4pt 间距刻度 `0/4/8/12/16/20/24/32/40/48/64/96`；只动 `transform/opacity/clip-path`；`ease-out-quart cubic-bezier(0.25,1,0.5,1)`；时长 instant 100 / fast 150 / normal 250 / slow 400ms；`prefers-reduced-motion` 必需；禁止嵌套卡片 |
+| R3 | **Visual Design Standards**（catlog22/Claude-Code-Workflow） | https://github.com/catlog22/Claude-Code-Workflow/blob/main/.claude/skills/team-ux-improve/specs/design-standards.md | 4pt 间距刻度 `0/4/8/12/16/20/24/32/40/48/64/96`；动效属性原文列 7 项（另含 background-color / color / box-shadow / filter），且明确 **NEVER animate: width, height**；`ease-out-quart cubic-bezier(0.25,1,0.5,1)`；时长 instant 100 / fast 150 / normal 250 / slow 400ms；`prefers-reduced-motion` 必需；禁止嵌套卡片 |
 | R4 | **Design Principles Reference**（dinhanhthi/coding-friend） | https://github.com/dinhanhthi/coding-friend/blob/main/plugin-antigravity/skills/cf-design/scripts/design-principles.md | 3–4 级字号、2–3 级字重、modular scale 1.25/1.333、60–75ch 阅读宽度、Grid first、section 间距为组件间距 2–3 倍；"不要混用 8 种灰 / 3 种蓝" |
-| R5 | **Material Design · Duration & easing** | https://m1.material.io/motion/duration-easing.html ／ https://material.io/go/design-easing | 移动端 300ms、进入 225ms、退出 195ms、桌面 150–200ms、>400ms 显得慢；standard `cubic-bezier(0.4,0,0.2,1)`、decelerate `cubic-bezier(0,0,0.2,1)`；减速段应长于加速段 |
+| R5 | **Material Design · Duration & easing** | https://m1.material.io/motion/duration-easing.html ／ https://material.io/go/design-easing | 移动端 300ms、进入 225ms、退出 195ms、桌面 150–200ms、>400ms 显得慢；standard `cubic-bezier(0.4,0,0.2,1)`、decelerate `cubic-bezier(0,0,0.2,1)`；减速段应长于加速段；⚠ 该页已标注「Material 1 is no longer maintained」，此处仅作历史时长依据 |
 | R6 | **Easing Functions Cheat Sheet** | https://easings.net | 缓动曲线速查；中文设计指南亦推荐 easings.net + cubic-bezier.com 作为参数来源（https://hellojasminelin.medium.com/the-guide-to-design-chapter-7-form-and-function-b206fa3fee24） |
 
 > 说明：公众号**不能**用 CSS `cubic-bezier()`（无 `<style>`、无 `@keyframes`）。
 > R3/R5/R6 的缓动参数通过 SMIL `calcMode="spline"` + `keySplines="0.25 1 0.5 1"`
 > 近似表达 ease-out-quart；时长取 500–900ms 是因为公众号是**阅读型内容**而非 UI 反馈，
 > 比 R5 的桌面 150–200ms 慢，但仍在"不产生等待感"的区间内。这是一次有意的偏离，记录下来。
+>
+> **必须补记的根本冲突**：R3 原文明确 `NEVER animate: width, height…`，R4 §7 也把 animating width/height
+> 列为反模式；而本项目 830 个 SMIL 动画里有 `width` 62、`height` 13、`x` 36。
+> 原因是微信白名单**只允许**这些几何属性（不能用 CSS transform / opacity 之外的合成层方案），
+> 属于平台约束下的有意取舍，但此前把 R3/R4 列为设计依据时未披露这一冲突。
 
-## 3.2 三风格对照表
+## 3.2 10 流派 × 100 风格对照表
 
-| # | 风格 | **配置**（60-30-10） | **布局** | **动画** |
+| 编号 | 流派 | 配置（60-30-10 / 字体） | 布局骨架随变体变化 | 装饰动效 |
 | --- | --- | --- | --- | --- |
-| 01 | Notion 白 · 编辑手记 | `#FBFAF9` / `#E7E5E4` / `#B4462F`；3 级字号；1px 线；4px 网格 | 单栏左对齐，左侧 1px 竖线锚定，大留白，纵向笔记流 | `opacity` 错峰淡入 + 竖线 `height` 生长；**零位移**，最克制 |
-| 02 | Linear 暗 · 终端卡片 | `#0E0E12` / `#1A1A20` / `#8B7CFF`；等宽字体栈；窗口 chrome + 刻度列 | 卡片式，`$ command → output` 分块，进度条横贯顶部 | `width` 进度条 + 逐行淡入；`begin="click"` 点击反馈（公众号特有交互） |
-| 03 | Stripe 暖 · 杂志分栏 | `#F7F5F1` / `#E4DDD1` / `#635BFF`；衬线标题 + 无衬线正文 | 非对称双栏，左侧大序号 + 参数栏，右侧标题与正文，底部三段色块 | 标题下划线 `width` 展开 + 底部 `animateTransform translate` 错峰滑入 |
+| 001–010 | 瑞士网格 | 10 套浅色板 + 超大序号 | 2/3/4/5/6/7/8/9/10/12 栏网格 | `width` / `height` 生长 |
+| 011–020 | 杂志分栏 | 衬线标题 + 无衬线正文 | 左栏宽 176→264px 非对称双栏 | 下划线展开 + `translate` |
+| 021–030 | 终端卡片 | 深色底 + 等宽字体 | 内边距、圆角、刻度密度 | 进度条 + pulse |
+| 031–040 | 工程蓝图 | 深色网格 + 描边线框 | 网格 20→40px、尺寸标注 | `stroke-dashoffset` 描边 |
+| 041–050 | 包豪斯 | 原色几何 | 圆半径、三角高、色块宽 | `rotate` 360° 回位 |
+| 051–060 | 孔版叠印 | 双专色 | 错位 6→18px、网点密度 | 双专色叠印 |
+| 061–070 | 孟菲斯 | 撞色 + 荧光 | 波点间距、斜线数、边框粗 | 描边 + `rotate` |
+| 071–080 | 报纸铅字 | 报头 + 双细线 | 2/3/4 栏、报头字号 | `height` 生长 |
+| 081–090 | 粗野主义 | 粗框 + 荧光强调 | 边框 4→10px、硬阴影 8→16px | `x` 位移 + `width` |
+| 091–100 | 极简笔记 | 大留白 + 1px 竖线 | 留白、行距、竖线高 | `opacity` 淡入 |
 
-三个风格分别把"审美"押在**留白 / 结构 / 节奏**上，便于对照判断，而不是比谁更花哨。
+> **审美边界（独立审核结论）**：`AUDIT-REPORT.md` 的两名独立盲评者给出视觉可区分度
+> **2.20 ± 1.04 / 5**（阈值 3.0），10 个流派平均分全部 < 4，判定「同骨架换色」假设**未被拒绝**。
+> 「100/100 结构唯一、色板唯一」是**代码级**指标，不能当作视觉多样性证据。
+> 该结论置信度 `[低]`（评分者为模型、抽样偏袒同骨架配对、客观脚本给出方向相反的证据），需人评复核。
 
 ## 3.3 由限制倒推的设计决策
 
 - 因为**不能用渐变/滤镜/阴影**，层次只能靠明度差与 1px 线 → 更接近 Notion/Linear；
 - 因为**不能用 `<style>`/`class`**，所有样式是元素属性 → 天然强制"少即是多"；
-- 因为**不能用 `id`**，事件只能绑自身 → 第一版只做一个 `begin="click"` 反馈，不做展开长图文；
+- 因为**不能用 `id`**，事件只能绑自身 → v0.1 曾做 `begin="click"` 反馈；独立审核实测 v0.2.0 的 100 张里该属性计数为 **0**，不做展开长图文；
 - 因为**动画可能被过滤**，静态终态必须完整 → 元素不写 `opacity="0"`，
   `from="0"` 只写在 `<animate>` 内；
 - 腾讯云那篇实践文章的总结很贴切：「**有时候限制反而让设计变得更干净**」
@@ -353,10 +383,10 @@ https://tsight.io/articles/11245390（风控边界）
 | 已完成 | 未完成 |
 | --- | --- |
 | ✅ 真实联网检索，全部结论附 URL | ❌ **未**在真实公众号账号下完成保存草稿 → 重开 → iOS/Android 浅色/深色预览验收 |
-| ✅ 100 个风格按公开白名单约束编写，100/100 结构唯一 | ❌ **未**声称审美优于任何方案（用户是 SVG 小白，本次只做视觉对照，不做能力评价） |
+| ✅ 100 个风格按公开白名单约束编写，100/100 结构唯一（**代码级**指标，非视觉多样性证据） | ❌ **未**声称审美优于任何方案（用户是 SVG 小白，本次只做视觉对照，不做能力评价） |
 | ✅ Edge 无头真实浏览器渲染截图（`preview.png`） | ❌ 微信后台二次清洗结果无法在本地复现 |
-| ✅ 三个独立脚本的客观验证（见下方记录） | ❌ **未**在真实公众号里粘贴过 100 张（459–492 KB），体积风险仅按公开限制推断 |
-| ✅ 富文本复制含 `text/html` + `text/plain` 与 execCommand 降级 | ❌ 未做跨设备 SMIL 兼容性实测（`restart` / `fill="freeze"` 的 iOS/安卓差异已知但未经本仓库实测） |
+| ✅ 三个独立脚本的客观验证（见下方记录） | ❌ **未**在真实公众号里粘贴过 100 张（492.4 KiB / 504,248 B），体积风险仅按公开限制推断 |
+| ✅ 富文本复制含 `text/html` + `text/plain` 与 execCommand 降级 | ❌ 未做跨设备 SMIL 兼容性实测；实测 `fill="freeze"` 830 处、`begin="click"` 与 `restart` 均为 **0** |
 
 ### 验证记录（2026-11-08，均为脚本客观结果）
 

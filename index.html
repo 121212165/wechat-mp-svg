@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>公众号 SVG Skill · 第一版 · 先看审美</title>
+<title>公众号 SVG Skill · v0.2.0 · 100 风格 · 先看审美</title>
 <style>
 :root{
   --bg:#FAFAF9;--surface:#FFFFFF;--surface-2:#F5F5F4;
@@ -3604,7 +3604,7 @@ const COPY_TEXT = {
     '2. HTML 源码模式：安装 Chrome 扩展 wechat-mp-html-source-helper，在编辑页打开「HTML 源码」→ 粘贴【复制全文 HTML 源码】的内容 → 插入到光标位置。该扩展明确保留常见 SVG 图形与 SMIL 动画。',
     '3. 第三方编辑器中转：秀米 / 135 / E2.COOL 的「HTML 源码组件」→ 同步到公众号草稿箱。'
   ],
-  risk:'必须知道的风险：微信后台会二次清洗标签、属性和样式，最终结果可能与原始 HTML 不一致；扩展作者也注明「保留代码不代表微信一定接受」。一次粘贴 100 张 SVG（约 400 KB）极可能超时、截断或被清洗，建议分批。请保存草稿后重新打开，并在 iOS + Android 真机的浅色 / 深色预览中验收。本仓库未在真实公众号账号下完成发布验收，不声称「已上线可用」。',
+  risk:'必须知道的风险：微信后台会二次清洗标签、属性和样式，最终结果可能与原始 HTML 不一致；扩展作者也注明「保留代码不代表微信一定接受」。一次粘贴 100 张 SVG（约 492 KiB / 504,248 字节，UTF-8 口径）极可能超时、截断或被清洗，建议分批。请保存草稿后重新打开，并在 iOS + Android 真机的浅色 / 深色预览中验收。本仓库未在真实公众号账号下完成发布验收，不声称「已上线可用」。',
   refsTitle:'资源引用',
   refsNote:'审美（配置 / 布局 / 动画）与公众号约束的依据，均为可访问的公开来源。公众号正文外链会被编辑器清洗，故此处以纯文本给出 URL。',
   refs:[
@@ -3975,16 +3975,16 @@ function refreshWhole(){
 
   const chars = frag.replace(/<[^>]*>/g,'').replace(/\s/g,'').length;
   const anims = (frag.match(/<animate(?:Transform|Motion)?\b/gi) || []).length;
-  const kb = frag.length/1024;
+  const kb = new TextEncoder().encode(frag).length/1024; // UTF-8 字节；中文 3 字节/字，不能用 JS 字符数
   document.getElementById('wholeStat').textContent =
-    o.styles.length + ' 张 SVG · ' + chars + ' 字 · ' + anims + ' 个动画 · ' + kb.toFixed(0) + ' KB · ' +
+    o.styles.length + ' 张 SVG · ' + chars + ' 字 · ' + anims + ' 个动画 · ' + kb.toFixed(0) + ' KiB · ' +
     (motionOn ? '含动画' : '静止终态') + ' / ' + ACCENT_NAMES[accentIdx];
 
   const warn = document.getElementById('sizeWarn');
   if (o.styles.length > 12 || kb > 150){
     warn.hidden = false;
     warn.textContent = '⚠ 当前范围 ' + o.styles.length + ' 张 SVG / ' + kb.toFixed(0) +
-      ' KB。微信编辑器对单篇长度与 SVG 数量有限制，一次粘贴 100 张极可能超时、截断或被清洗。建议先把范围切到「当前页 12 个」试粘验证通路，再分批发送；或改用【复制全文 HTML 源码】走源码模式。';
+      ' KiB（UTF-8 字节）。微信编辑器对单篇长度与 SVG 数量有限制，一次粘贴 100 张极可能超时、截断或被清洗。建议先把范围切到「当前页 12 个」试粘验证通路，再分批发送；或改用【复制全文 HTML 源码】走源码模式。';
   } else warn.hidden = true;
   return frag;
 }
