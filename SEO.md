@@ -143,9 +143,36 @@ GitHub 仓库元数据（`gh api repos/121212165/wechat-mp-svg`）：
 
 ---
 
-## 7. 部署与线上验证
+## 7. 部署与线上验证（2026-11-09 实测）
 
-> 本节在部署后由实测结果填写，见文件末尾「部署记录」。
+### GitHub Pages（规范站点，已上线）
+
+`POST /repos/121212165/wechat-mp-svg/pages`，`build_type=legacy`、`source={branch: master, path: /}`，状态从 `building` → **`built`**，`https_enforced=true`，站点 URL：`https://121212165.github.io/wechat-mp-svg/`。根目录已放 `.nojekyll` 防止 Jekyll 干扰。
+
+| 路径 | 实测 |
+| --- | --- |
+| `/`、`/index.html` | 200 / 438,453 B / `text/html; charset=utf-8` |
+| `/guide.html` | 200 / 27,474 B / `text/html; charset=utf-8` |
+| `/robots.txt` | 200 / 517 B / `text/plain` |
+| `/sitemap.xml` | 200 / 470 B / `application/xml` |
+| `/llms.txt` | 200 / 3,563 B / `text/plain` |
+| `/favicon.svg` | 200 / 499 B / `image/svg+xml` |
+| `/og-image.png` | 200 / 60,434 B / `image/png` |
+| `/styles/001.svg` | 200 / 2,144 B / `image/svg+xml` |
+
+内容与元数据复核：
+
+- 线上 `guide.html` 与本地**逐字节一致**（`cmp` 通过），Jekyll 未改动；页面**无 `noindex`**，`robots=index,follow`，canonical、OG 10 项、JSON-LD 均在线上可见。
+- 线上 `index.html` 含 description、canonical、JSON-LD 与 `<noscript>` 正文。
+- Edge 无头截图 `guide-preview.png` 人工复核：H1、按钮组、chips、目录、章节标题、20 原型表格全部正常，无空白 / 错位 / 破图。
+
+### Git
+
+commit `7426158` 已推送到 `master`。推送时遇到全局 `~/.gitconfig` 写死旧代理 `127.0.0.1:7897`、而当前会话代理为 `127.0.0.1:63985` 的问题，用 `git -c http.proxy="$http_proxy" -c https.proxy="$https_proxy" push` 临时覆盖解决；**未修改用户全局配置**。若后续 push 仍失败，建议把 `.gitconfig` 里的代理改为当前端口或删掉让它走环境变量。
+
+### WorkBuddy 在线应用
+
+**本轮未覆盖**。`https://wechat-svg-styles.app.workbuddy.host/?sharecode=ABASRVDAE5` 仍是 v0.2.0 页面。覆盖已发布的线上链接需要单独授权，且该域名本身对爬虫 403 + noindex（§1），所以不影响本次 SEO 的规范站点。需要同步时说一声即可。
 
 ---
 
