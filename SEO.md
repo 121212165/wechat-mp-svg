@@ -172,7 +172,11 @@ commit `7426158` 已推送到 `master`。推送时遇到全局 `~/.gitconfig` �
 
 ### WorkBuddy 在线应用
 
-**本轮未覆盖**。`https://wechat-svg-styles.app.workbuddy.host/?sharecode=ABASRVDAE5` 仍是 v0.2.0 页面。覆盖已发布的线上链接需要单独授权，且该域名本身对爬虫 403 + noindex（§1），所以不影响本次 SEO 的规范站点。需要同步时说一声即可。
+已按用户明确授权覆盖同一链接（不新建应用）：`https://wechat-svg-styles.app.workbuddy.host/?sharecode=ABASRVDAE5`。
+
+带缓存绕过参数回读（`&v=seo20261109`）实测：HTTP 200 / 438,453 B，`<title>100 风格展示页 · 公众号 SVG 排版模板一键复制</title>`，description / canonical / JSON-LD / `<noscript>` / guide 入口全部存在，`100 STYLES` 与 `v0.3.0` 在，`第一版` 计数为 **0**。
+
+注意该域名本身仍对无 sharecode 的请求 403 + noindex（§1），**它不是 SEO 载体**，只作交互分享入口；规范站点始终是 GitHub Pages。
 
 ---
 

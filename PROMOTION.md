@@ -186,8 +186,8 @@ Not verified: real WeChat MP account draft→reopen→iOS/Android light/dark pre
 - [x] `robots.txt` / `sitemap.xml` / `llms.txt` / `favicon.svg`
 - [x] `og-image.png` (1200×630) / `social-preview.png` (1280×640)
 - [x] 仓库 description / homepage / 12 个 topics
-- [ ] GitHub Pages 上线并验证 4 个根文件 200
-- [ ] WorkBuddy 在线版覆盖到 v0.3.0
+- [x] GitHub Pages 上线，9 个根文件实测 200、无 noindex、https_enforced
+- [x] WorkBuddy 在线版已覆盖到 v0.3.0 + SEO 元信息（同一链接，回读确认）
 
 **需要你的账号**
 - [ ] Settings → General → Social preview 上传 `social-preview.png`（1280×640 / <1 MB；GitHub 无 CLI/API，只能网页点）
