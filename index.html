@@ -3,7 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>公众号 SVG Skill · v0.3.0 · 100 风格 · 先看审美</title>
+<title>100 风格展示页 · 公众号 SVG 排版模板一键复制</title>
+<meta name="description" content="交互式预览 100 个公众号 SVG 排版模板：20 个构图原型筛选、分页浏览、整篇富文本一键复制到公众号编辑器、逐张白名单合规自检，以及可离线导入第三方编辑器的全文 HTML 成品。">
+<meta name="keywords" content="公众号 SVG,微信公众号 SVG 排版,SVG 交互图文,公众号排版模板,SMIL 动画,SVG AttributeName 白名单,一键复制到公众号">
+<meta name="author" content="121212165">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="theme-color" content="#FAFAF9">
+<link rel="canonical" href="https://121212165.github.io/wechat-mp-svg/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate" type="text/markdown" href="llms.txt">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="公众号 SVG Skill">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="100 风格展示页 · 公众号 SVG 排版模板一键复制">
+<meta property="og:description" content="100 个按微信 SVG 白名单编写的图文风格，20 个构图原型，整篇富文本一键复制进公众号编辑器。">
+<meta property="og:url" content="https://121212165.github.io/wechat-mp-svg/">
+<meta property="og:image" content="https://121212165.github.io/wechat-mp-svg/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="公众号 SVG Skill：100 种风格、20 个构图原型、一键复制到公众号">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="100 风格展示页 · 公众号 SVG 排版模板一键复制">
+<meta name="twitter:description" content="100 个按微信 SVG 白名单编写的图文风格，20 个构图原型，整篇富文本一键复制进公众号编辑器。">
+<meta name="twitter:image" content="https://121212165.github.io/wechat-mp-svg/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://121212165.github.io/wechat-mp-svg/#app",
+  "name": "公众号 SVG 风格展示与一键复制",
+  "url": "https://121212165.github.io/wechat-mp-svg/",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Web browser",
+  "inLanguage": "zh-CN",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+  "author": { "@type": "Person", "name": "121212165", "url": "https://github.com/121212165" },
+  "license": "https://github.com/121212165/wechat-mp-svg/blob/master/LICENSE",
+  "description": "100 个符合微信公众号 SVG AttributeName 白名单的图文风格模板，支持富文本整篇一键复制、合规自检与全文 HTML 导出。"
+}
+</script>
 <style>
 :root{
   --bg:#FAFAF9;--surface:#FFFFFF;--surface-2:#F5F5F4;
@@ -179,6 +218,17 @@ footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-si
 <body>
 <div class="wrap">
 
+  <noscript>
+    <section style="padding:24px 0;border-top:1px solid #E7E5E4;border-bottom:1px solid #E7E5E4;margin:24px 0">
+      <h2 style="font-size:22px;margin:0 0 12px">公众号 SVG 排版模板：100 种风格，一键复制进微信</h2>
+      <p style="line-height:1.9;color:#57534E">本项目提供 100 个按微信公众号 SVG AttributeName 白名单从第一笔编写的图文排版模板。微信编辑器会过滤 script、style 标签与全部 id 属性，CSS @keyframes 与 JS 动画保存后失效，只有 SVG 命名空间里的 SMIL 声明式动画配合一份约 20 项的白名单能保留下来。因此所有模板都采用纯色几何、内联属性与手写多行文本，并且移除全部动画后正文仍完整可读。</p>
+      <p style="line-height:1.9;color:#57534E">100 个风格由 20 个构图原型各 5 个变体组成：瑞士网格、杂志分栏、终端卡片、工程蓝图、包豪斯、孔版叠印、孟菲斯、报纸铅字、粗野主义、极简笔记，以及 v0.3.0 新增的竖排卷轴、居中诗页、分屏对照、卡片阶梯、字阶、清单表格、对角构图、满幅海报、便签、横幅飘带。画布高度横跨 320 到 760 共 13 种，合计 930 个 SMIL 动画标签。</p>
+      <p style="line-height:1.9;color:#57534E">展示页支持按原型筛选、分页浏览、收藏、强调色切换与静止终态；单张卡片可一键复制到公众号，顶部「一键复制全文」会把标题、导语、所选范围的全部 SVG、配置与来源编译成公众号安全版富文本，一次写入剪贴板，到公众号后台正文按 Ctrl+V 即可。文字部分全部内联样式，不用 class、id 与外链。另有 <a href="https://121212165.github.io/wechat-mp-svg/wechat-article.html">编译好的全文 HTML 成品</a> 可离线打开或导入第三方编辑器。</p>
+      <p style="line-height:1.9;color:#57534E">完整说明：<a href="https://121212165.github.io/wechat-mp-svg/guide.html">公众号 SVG 排版说明与常见问题</a> · 源码与调研报告：<a href="https://github.com/121212165/wechat-mp-svg">github.com/121212165/wechat-mp-svg</a> · 约束速查：<a href="https://github.com/121212165/wechat-mp-svg/blob/master/references/wechat-svg-constraints.md">references/wechat-svg-constraints.md</a>。项目采用 MIT 许可。</p>
+      <p style="line-height:1.9;color:#A8A29E">已知边界：未在真实公众号账号完成保存草稿 / 重开 / iOS 与 Android 浅色深色预览验收；v0.2.0 的独立盲评视觉可区分度为 2.20 ± 1.04 / 5，v0.3.0 已重构但尚未重做盲评，不声称可区分度已达标。</p>
+    </section>
+  </noscript>
+
   <header>
     <div class="eyebrow">WeChat MP SVG Skill · v0.3.0 · 100 STYLES</div>
     <h1>先看审美，不评价能力</h1>
@@ -190,11 +240,15 @@ footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-si
       <span class="chip">100/100 白名单校验通过</span>
       <span class="chip">整篇一键复制富文本</span>
     </div>
+    <p class="seo-link" style="margin-top:14px;font-size:13px;color:#57534E">
+      第一次来？先读 <a href="https://121212165.github.io/wechat-mp-svg/guide.html">公众号 SVG 排版说明与常见问题</a>（纯静态、无需 JS），
+      或看 <a href="https://github.com/121212165/wechat-mp-svg">GitHub 源码与调研报告</a>。
+    </p>
   </header>
 
   <div class="hero-copy">
     <div class="hc-kicker">ONE CLICK · 整篇图文</div>
-    <div class="hc-title">一键复制全文 · 整个页面内容一起发公众号</div>
+    <h2 class="hc-title">一键复制全文 · 整个页面内容一起发公众号</h2>
     <p class="hc-desc">把<strong>整页内容</strong>编译成一份公众号安全版 HTML：标题、导语、原文、所选范围的<strong>全部 SVG</strong>、每个风格的配置 / 布局 / 动画说明、粘贴路径、风险提示、全部来源与免责，一次全部写进剪贴板。到公众号后台正文 <span class="mono">Ctrl+V</span> 即成一篇完整图文。<br>
     复制的是<strong>编译后的文章内容</strong>，不是本展示页的源码 —— 本页含 JS、按钮、交互控件，直接粘进公众号会被编辑器清洗掉，所以先编译、再复制。文字部分全部改成内联样式，不用 class / id / 外链。</p>
     <div class="hc-actions">

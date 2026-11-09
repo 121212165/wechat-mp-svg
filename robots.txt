@@ -1,0 +1,17 @@
+# wechat-mp-svg · 公众号 SVG Skill
+# 规范站点：GitHub Pages（当前 WorkBuddy 分享域名对无 sharecode 的请求返回 403 + noindex，不可索引）
+User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /contact-sheet-v020.html
+Disallow: /contact-sheet-v030.html
+
+# 允许主流 AI 爬虫读取公开内容（不承诺任何平台实际采纳）
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://121212165.github.io/wechat-mp-svg/sitemap.xml

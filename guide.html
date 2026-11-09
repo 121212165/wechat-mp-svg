@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>公众号 SVG 排版模板 · 100 种风格一键复制</title>
+<meta name="description" content="100 个按微信 SVG 白名单编写的公众号图文风格模板，纯 SMIL 动画、无 JS 无 id，支持整篇富文本一键复制到公众号编辑器；附 20 个构图原型、合规自检、全文 HTML 导出与开源 Skill 定义。">
+<meta name="keywords" content="公众号 SVG,微信公众号 SVG 排版,SVG 交互图文,公众号排版模板,SMIL 动画,SVG AttributeName 白名单,一键复制到公众号,微信图文排版">
+<meta name="author" content="121212165">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="theme-color" content="#FAFAF9">
+<link rel="canonical" href="https://121212165.github.io/wechat-mp-svg/guide.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate" type="text/markdown" href="llms.txt">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="公众号 SVG Skill">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="公众号 SVG 排版模板 · 100 种风格一键复制">
+<meta property="og:description" content="100 个按微信 SVG 白名单编写的图文风格，纯 SMIL 动画、无 JS 无 id，整篇富文本一键复制进公众号编辑器。">
+<meta property="og:url" content="https://121212165.github.io/wechat-mp-svg/guide.html">
+<meta property="og:image" content="https://121212165.github.io/wechat-mp-svg/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="公众号 SVG Skill：100 种风格、20 个构图原型、一键复制到公众号">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="公众号 SVG 排版模板 · 100 种风格一键复制">
+<meta name="twitter:description" content="100 个按微信 SVG 白名单编写的图文风格，纯 SMIL 动画、无 JS 无 id，整篇富文本一键复制进公众号编辑器。">
+<meta name="twitter:image" content="https://121212165.github.io/wechat-mp-svg/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://121212165.github.io/wechat-mp-svg/#website",
+      "url": "https://121212165.github.io/wechat-mp-svg/",
+      "name": "公众号 SVG Skill",
+      "inLanguage": "zh-CN",
+      "description": "微信公众号 SVG 图文排版模板、白名单约束速查与一键复制工具"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://121212165.github.io/wechat-mp-svg/#app",
+      "name": "公众号 SVG 风格展示与一键复制",
+      "url": "https://121212165.github.io/wechat-mp-svg/",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Web browser",
+      "browserRequirements": "交互式预览需要启用 JavaScript；静态说明页与 SVG 模板不需要",
+      "inLanguage": "zh-CN",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+      "author": { "@type": "Person", "name": "121212165", "url": "https://github.com/121212165" },
+      "license": "https://github.com/121212165/wechat-mp-svg/blob/master/LICENSE",
+      "description": "100 个符合微信公众号 SVG AttributeName 白名单的图文风格模板，支持富文本整篇一键复制、合规自检与全文 HTML 导出。"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://121212165.github.io/wechat-mp-svg/guide.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "公众号 SVG 排版和普通网页 SVG 有什么不同？",
+          "acceptedAnswer": { "@type": "Answer", "text": "微信公众号编辑器会过滤 script、style 标签和全部 id 属性，CSS @keyframes 与 JS 动画保存后失效；只有 SVG 命名空间里的 SMIL 动画（animate、animateTransform、animateMotion、set）配合一份约 20 项的 AttributeName 白名单能保留下来。因此公众号 SVG 必须写成纯色几何、内联属性、手写多行文本，且不能依赖 id 做事件绑定。" }
+        },
+        {
+          "@type": "Question",
+          "name": "一键复制到公众号是怎么实现的？",
+          "acceptedAnswer": { "@type": "Answer", "text": "展示页用 ClipboardItem 同时写入 text/html 与 text/plain，把编译后的文章当作富文本而非代码送进剪贴板；到公众号后台正文按 Ctrl+V，编辑器才会把 SVG 渲染成图形。文字部分全部改成内联样式，不用 class、id 与外链。本地 file:// 打开时会降级到 execCommand，因此建议使用 https 在线地址。" }
+        },
+        {
+          "@type": "Question",
+          "name": "这 100 个风格是不是只是换色？",
+          "acceptedAnswer": { "@type": "Answer", "text": "v0.2.0 的「10 骨架 × 10 参数变体」经两名独立盲评者评分，视觉可区分度仅 2.20 ± 1.04 / 5（阈值 3.0），未拒绝「本质只是换色」的假设。v0.3.0 据此重构为 20 个构图原型 × 5 变体，新增竖排卷轴、居中诗页、分屏对照、卡片阶梯、清单表格、满幅海报等 10 套信息架构，画布高度横跨 320–760 共 13 种，并删掉画面上的设计说明文字。但尚未重做独立盲评，因此不声称可区分度已达标。" }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么粘贴后样式丢失或动画不动？",
+          "acceptedAnswer": { "@type": "Answer", "text": "最常见原因是复制了展示页 HTML 源码而不是编译后的文章内容：页面含 JS、按钮、class 与交互控件，粘进公众号会被清洗成空白。其次是用了白名单外的属性（渐变、滤镜、clip-path、foreignObject、外链图片），或使用了 id 引用。建议先用「当前页 12 个」小范围试粘，再逐步扩大。" }
+        },
+        {
+          "@type": "Question",
+          "name": "一次粘贴 100 张 SVG 会不会出问题？",
+          "acceptedAnswer": { "@type": "Answer", "text": "会。完整全文约 412.9 KiB（422,774 字节，UTF-8 口径）、含 100 张 SVG，一次粘贴极可能超时、截断或被编辑器清洗。展示页在范围超过 12 张或 150 KiB 时显示红字警告，并提供全部 / 当前筛选 / 当前页 12 张 / 仅收藏四种范围，建议分批粘贴。" }
+        },
+        {
+          "@type": "Question",
+          "name": "这个项目是开源的吗？可以在哪里下载？",
+          "acceptedAnswer": { "@type": "Answer", "text": "是，采用 MIT 许可。仓库地址 https://github.com/121212165/wechat-mp-svg ，包含 SKILL.md 定义、100 个 styles/*.svg 模板、styles/catalog.json 元数据、可重复运行的生成与校验脚本、wechat-article.html 全文成品，以及 AUDIT-REPORT.md 独立审核报告。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#FAFAF9;--surface:#FFFFFF;--surface-2:#F5F5F4;
+  --line:#E7E5E4;--line-strong:#D6D3D1;
+  --ink:#18181B;--ink-2:#57534E;--ink-3:#A8A29E;
+  --accent:#635BFF;--accent-soft:#F0EFFF;
+  --ok:#2F6B4F;--warn:#B4462F;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.85 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px 96px}
+header{padding:56px 0 32px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:11px;letter-spacing:.12em;color:var(--ink-3);text-transform:uppercase;font-weight:600}
+h1{font-size:34px;line-height:1.35;margin:12px 0 16px;letter-spacing:-.02em}
+h2{font-size:22px;line-height:1.5;margin:48px 0 16px;padding-top:8px;letter-spacing:-.01em}
+h3{font-size:16px;margin:28px 0 8px}
+p{margin:0 0 16px;color:var(--ink-2)}
+strong{color:var(--ink);font-weight:600}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+a:hover{border-bottom-color:var(--accent)}
+.lede{font-size:17px;line-height:1.9;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{font-size:12px;padding:4px 10px;border:1px solid var(--line-strong);border-radius:999px;color:var(--ink-2);background:var(--surface)}
+.nav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
+.btn{display:inline-block;font-size:13px;font-weight:600;padding:8px 16px;border:1px solid var(--line-strong);border-radius:6px;background:var(--surface);color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{text-decoration:none;border-bottom:1px solid var(--accent)}
+.toc{margin:28px 0 0;padding:16px 20px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.toc ol{margin:8px 0 0;padding-left:20px}
+.toc li{margin:2px 0;color:var(--ink-2);font-size:13.5px}
+table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:13.5px;background:var(--surface)}
+th,td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:var(--surface-2);font-weight:600;color:var(--ink)}
+td{color:var(--ink-2)}
+code,.mono{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;font-size:.9em;background:var(--surface-2);padding:1px 5px;border-radius:3px;color:var(--ink)}
+.callout{padding:16px 20px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;margin:20px 0}
+.callout p{margin:0;color:var(--ink)}
+.warn{background:#FBF1ED;border-left-color:var(--warn)}
+ol.steps{padding-left:22px}
+ol.steps li{margin:0 0 12px;color:var(--ink-2)}
+figure{margin:24px 0;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+figure img{display:block;width:100%;height:auto;border:1px solid var(--line);background:#fff}
+figcaption{font-size:12.5px;color:var(--ink-3);margin-top:10px}
+.faq dt{font-weight:600;color:var(--ink);margin-top:20px;font-size:15px}
+.faq dd{margin:6px 0 0;color:var(--ink-2)}
+.src{font-size:13px;color:var(--ink-3)}
+.src li{margin:4px 0}
+footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-3)}
+@media(max-width:640px){.wrap{padding:0 16px 64px}h1{font-size:26px}h2{font-size:19px}header{padding:36px 0 24px}table{font-size:12px}th,td{padding:6px 8px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">WeChat MP SVG Skill · v0.3.0</div>
+  <h1>公众号 SVG 排版模板：100 种风格，一键复制进微信</h1>
+  <p class="lede">这是一套<strong>按微信公众号 SVG 白名单从第一笔编写</strong>的图文排版模板：100 个风格、20 个构图原型、930 个 SMIL 动画标签，不用 JavaScript、不用 <code>&lt;style&gt;</code>、不用 <code>id</code>。挑一个风格，点一下，整篇富文本就进了剪贴板，到公众号后台 <code>Ctrl+V</code> 即成图文。</p>
+  <div class="chips">
+    <span class="chip">100 个 SVG 模板</span>
+    <span class="chip">20 个构图原型</span>
+    <span class="chip">13 种画布比例</span>
+    <span class="chip">SMIL 白名单合规</span>
+    <span class="chip">整篇一键复制</span>
+    <span class="chip">MIT 开源</span>
+  </div>
+  <div class="nav">
+    <a class="btn primary" href="index.html">打开 100 风格展示页</a>
+    <a class="btn" href="https://github.com/121212165/wechat-mp-svg">GitHub 仓库</a>
+    <a class="btn" href="https://wechat-svg-styles.app.workbuddy.host/?sharecode=ABASRVDAE5">在线交互版</a>
+  </div>
+</header>
+
+<nav class="toc" aria-label="目录">
+  <strong>本页目录</strong>
+  <ol>
+    <li><a href="#what">公众号 SVG 排版是什么，为什么不能照搬网页 SVG</a></li>
+    <li><a href="#styles">100 个风格怎么组织：20 个构图原型</a></li>
+    <li><a href="#use">三步使用：从展示页到公众号正文</a></li>
+    <li><a href="#whitelist">微信 SVG AttributeName 白名单速查</a></li>
+    <li><a href="#faq">常见问题</a></li>
+    <li><a href="#limits">已知限制与诚实边界</a></li>
+    <li><a href="#sources">资料来源</a></li>
+  </ol>
+</nav>
+
+<h2 id="what">1. 公众号 SVG 排版是什么，为什么不能照搬网页 SVG</h2>
+<p>微信公众号后台的正文编辑器会对 HTML 做清洗。公开资料普遍把 SVG 描述为被「整体放行」的命名空间，但放行是有代价的：<code>script</code>、<code>style</code> 标签被删，<strong>所有元素上的 <code>id</code> 属性会被移除</strong>，CSS <code>@keyframes</code> / <code>animation</code> / <code>position</code> 保存后失效，JS 更不可能执行。也就是说，网页里最常见的动效方案在公众号里全部不可用。</p>
+<p>能活下来的是 SVG 自带的<strong>声明式 SMIL 动画</strong>——<code>&lt;animate&gt;</code>、<code>&lt;animateTransform&gt;</code>、<code>&lt;animateMotion&gt;</code>、<code>&lt;set&gt;</code>，配合一份约 20 项的 <code>attributeName</code> 白名单。这套范式最早在 2016 年由 JZCreative 团队与微信团队共同测试发布，后来被收录进《融媒体SVG交互设计技术规范》T/CASME 1609—2024。</p>
+<p>由此推出一套很硬的写法约束：<strong>纯色几何</strong>（渐变、滤镜、<code>clip-path</code>、<code>foreignObject</code>、外链图片都不用）、<strong>内联属性</strong>（无 class 样式表）、<strong>手写多行 <code>&lt;text&gt;</code></strong>（无自动换行）、<strong>静态自洽</strong>（动画被删掉，画面与正文仍完整可读）。本项目 100 张模板全部按这套约束生成，并由独立脚本逐张校验。</p>
+<div class="callout">
+  <p><strong>一句话区分：</strong>普通网页 SVG 追求「能画出来」，公众号 SVG 追求「被编辑器清洗之后还能画出来」。</p>
+</div>
+
+<h2 id="styles">2. 100 个风格怎么组织：20 个构图原型</h2>
+<p>第一版只有 3 个风格。扩到 100 个时，最初的做法是「10 个流派 × 每派 10 个参数变体」——栏数、间距、色板、字号轮换。但两名独立盲评者给出的视觉可区分度只有 <strong>2.20 ± 1.04 / 5</strong>（阈值 3.0），「本质只是换色」的假设没被拒绝。于是 v0.3.0 改成 <strong>20 个构图原型 × 5 变体</strong>，改的是信息架构与画布比例，而不是数值。</p>
+<table>
+  <caption style="text-align:left;font-size:13px;color:var(--ink-3);padding-bottom:8px">20 个构图原型（节选全部 20 行）</caption>
+  <thead><tr><th>编号</th><th>构图原型</th><th>布局骨架</th><th>画布高</th></tr></thead>
+  <tbody>
+    <tr><td>001–005</td><td>瑞士网格</td><td>2–12 栏刚性网格，超大序号</td><td>460</td></tr>
+    <tr><td>006–010</td><td>杂志分栏</td><td>非对称双栏，衬线标题</td><td>480</td></tr>
+    <tr><td>011–015</td><td>终端卡片</td><td>窗口 chrome + 命令行 + 进度条</td><td>500</td></tr>
+    <tr><td>016–020</td><td>工程蓝图</td><td>深色网格 + 尺寸标注 + 描边</td><td>480</td></tr>
+    <tr><td>021–025</td><td>包豪斯</td><td>圆 / 三角 / 硬边原色块</td><td>460</td></tr>
+    <tr><td>026–030</td><td>孔版叠印</td><td>双专色错位 + 网点</td><td>470</td></tr>
+    <tr><td>031–035</td><td>孟菲斯</td><td>波点 / 斜线 / 锯齿撞色</td><td>480</td></tr>
+    <tr><td>036–040</td><td>报纸铅字</td><td>报头 + 双细线 + 多栏</td><td>500</td></tr>
+    <tr><td>041–045</td><td>粗野主义</td><td>粗边框 + 硬阴影</td><td>440</td></tr>
+    <tr><td>046–050</td><td>极简笔记</td><td>大留白 + 1px 竖线</td><td>440</td></tr>
+    <tr><td>051–055</td><td>竖排卷轴</td><td>六条横向色带 + x 阶梯错位</td><td>760</td></tr>
+    <tr><td>056–060</td><td>居中诗页</td><td>全居中、方版圆环、大留白</td><td>680</td></tr>
+    <tr><td>061–065</td><td>分屏对照</td><td>左右反白双底，前三行 / 后三行分置</td><td>460</td></tr>
+    <tr><td>066–070</td><td>卡片阶梯</td><td>六张细边框卡片逐行错位</td><td>620</td></tr>
+    <tr><td>071–075</td><td>字阶</td><td>字号 14→34 递增 + 同步缩进</td><td>560</td></tr>
+    <tr><td>076–080</td><td>清单表格</td><td>序号列 + 每行底线</td><td>540</td></tr>
+    <tr><td>081–085</td><td>对角构图</td><td>斜切大色块，沿对角线排字</td><td>600</td></tr>
+    <tr><td>086–090</td><td>满幅海报</td><td>2/3 满幅强调色 + 反白巨字</td><td>700</td></tr>
+    <tr><td>091–095</td><td>便签</td><td>三张旋转便签 + 胶带</td><td>540</td></tr>
+    <tr><td>096–100</td><td>横幅飘带</td><td>极宽横幅，两列 × 三行</td><td>320</td></tr>
+  </tbody>
+</table>
+<p>100 张 SVG 结构互不重复、100 套色板互不重复，画布高度横跨 320–760 共 13 种；画面上不再印「配置 / 布局 / 动画」参数说明文字——那既干扰盲评，也让所有图看起来像同一张说明卡。下面是三张真实模板（直接取自 <code>styles/</code>，未做任何修饰）：</p>
+
+<figure>
+  <img src="styles/001.svg" width="680" height="460" loading="lazy" alt="风格 001 瑞士网格：浅色底、超大序号与左对齐网格排版的公众号 SVG 模板">
+  <figcaption>风格 001 · 瑞士网格 —— 刚性栅格与超大序号，克制、左对齐。</figcaption>
+</figure>
+<figure>
+  <img src="styles/056.svg" width="680" height="680" loading="lazy" alt="风格 056 居中诗页：全居中构图、圆环与大留白的公众号 SVG 模板">
+  <figcaption>风格 056 · 居中诗页 —— 全居中构图，与前一张的信息架构完全不同。</figcaption>
+</figure>
+<figure>
+  <img src="styles/086.svg" width="680" height="700" loading="lazy" alt="风格 086 满幅海报：强调色满幅铺底、反白巨字与下部紧凑正文的公众号 SVG 模板">
+  <figcaption>风格 086 · 满幅海报 —— 2/3 满幅强调色，画布比例也明显不同。</figcaption>
+</figure>
+
+<h2 id="use">3. 三步使用：从展示页到公众号正文</h2>
+<ol class="steps">
+  <li><strong>打开展示页</strong>（<a href="index.html">index.html</a> 或在线交互版），按 20 个构图原型筛选、分页浏览，也可以收藏喜欢的编号。</li>
+  <li><strong>选复制范围</strong>：单个风格用卡片上的「一键复制到公众号」；整篇图文用顶部的「一键复制全文」，范围可选全部 100 / 当前筛选 / 当前页 12 张 / 仅收藏。</li>
+  <li><strong>到公众号后台正文按 <code>Ctrl+V</code></strong>。主按钮通过 <code>ClipboardItem</code> 同时写入 <code>text/html</code> 与 <code>text/plain</code>，编辑器才会把 SVG 当图形渲染，而不是当成一段代码。若富文本路径被清洗，可改用「复制全文 HTML 源码」走 HTML 源码模式或第三方编辑器。</li>
+</ol>
+<div class="callout warn">
+  <p><strong>别直接复制展示页的 HTML 源码。</strong>它含 JS、按钮、class 与交互控件，粘进公众号会被清洗成空白。页面复制的是<strong>编译后的文章内容</strong>：全部内联样式、只用 <code>section/p/br</code>、无 class / id / script / 外链，SVG 原样嵌入。</p>
+</div>
+<p>仓库里还有一份编译好的 <a href="wechat-article.html">wechat-article.html</a>（412.9 KiB / 100 张 SVG / 930 个动画），无 JS，可离线打开或导入秀米、135 等第三方编辑器。它与页面上的「一键复制全文」由同一套纯函数导出，逐字节同源。</p>
+
+<h2 id="whitelist">4. 微信 SVG AttributeName 白名单速查</h2>
+<p>下表是 2021 版公开清单的整理（约 20 个可用属性），也是本项目 930 个动画标签的准绳。需要注意：<strong>这些资料没有一份是微信官方文档</strong>，最近一次公开清单距今已有数年，2026 年的实际行为请以真机预览为准。</p>
+<table>
+  <thead><tr><th>元素</th><th>可用 attributeName</th><th>典型用途</th></tr></thead>
+  <tbody>
+    <tr><td><code>animate</code></td><td><code>x</code> <code>y</code> <code>width</code> <code>height</code> <code>r</code></td><td>生长、位移、展开式图文、进度条</td></tr>
+    <tr><td><code>animate</code></td><td><code>opacity</code> <code>fill</code></td><td>淡入、颜色过渡</td></tr>
+    <tr><td><code>animate</code></td><td><code>d</code> <code>points</code></td><td>贝塞尔 / 多边形补间（表现具随机性）</td></tr>
+    <tr><td><code>animate</code></td><td><code>stroke</code> <code>stroke-width</code> <code>stroke-linecap</code> <code>stroke-dashoffset</code></td><td>描边动画、进度线</td></tr>
+    <tr><td><code>set</code></td><td><code>visibility</code></td><td>防误触的显隐切换</td></tr>
+    <tr><td><code>animateTransform</code></td><td><code>translate</code> <code>scale</code> <code>rotate</code> <code>skewX</code> <code>skewY</code></td><td>位移、翻转、台历翻阅</td></tr>
+    <tr><td><code>animateMotion</code></td><td><code>path</code></td><td>轨迹动画</td></tr>
+  </tbody>
+</table>
+<p><strong>本项目的实际用量</strong>（脚本统计）：<code>opacity</code> 495、<code>transform</code> 252、<code>width</code> 92、<code>x</code> 54、<code>height</code> 22、<code>stroke-dashoffset</code> 15，合计 930 个标签；<code>fill="freeze"</code> 930 处，<code>begin="click"</code> 与 <code>restart</code> 均为 0。</p>
+<p class="src">受限元素：<code>use</code> <code>mpath</code> <code>by</code> <code>clipPath</code> <code>filter</code>；白名单文档还明确注明不应含剪切路径、滤镜、渐变、网格等矢量特征。</p>
+
+<h2 id="faq">5. 常见问题</h2>
+<dl class="faq">
+  <dt>公众号 SVG 排版和普通网页 SVG 有什么不同？</dt>
+  <dd>微信公众号编辑器会过滤 script、style 标签和全部 id 属性，CSS @keyframes 与 JS 动画保存后失效；只有 SVG 命名空间里的 SMIL 动画（animate、animateTransform、animateMotion、set）配合一份约 20 项的 AttributeName 白名单能保留下来。因此公众号 SVG 必须写成纯色几何、内联属性、手写多行文本，且不能依赖 id 做事件绑定。</dd>
+
+  <dt>一键复制到公众号是怎么实现的？</dt>
+  <dd>展示页用 ClipboardItem 同时写入 text/html 与 text/plain，把编译后的文章当作富文本而非代码送进剪贴板；到公众号后台正文按 Ctrl+V，编辑器才会把 SVG 渲染成图形。文字部分全部改成内联样式，不用 class、id 与外链。本地 file:// 打开时会降级到 execCommand，因此建议使用 https 在线地址。</dd>
+
+  <dt>这 100 个风格是不是只是换色？</dt>
+  <dd>v0.2.0 的「10 骨架 × 10 参数变体」经两名独立盲评者评分，视觉可区分度仅 2.20 ± 1.04 / 5（阈值 3.0），未拒绝「本质只是换色」的假设。v0.3.0 据此重构为 20 个构图原型 × 5 变体，新增竖排卷轴、居中诗页、分屏对照、卡片阶梯、清单表格、满幅海报等 10 套信息架构，画布高度横跨 320–760 共 13 种，并删掉画面上的设计说明文字。但尚未重做独立盲评，因此不声称可区分度已达标。</dd>
+
+  <dt>为什么粘贴后样式丢失或动画不动？</dt>
+  <dd>最常见原因是复制了展示页 HTML 源码而不是编译后的文章内容：页面含 JS、按钮、class 与交互控件，粘进公众号会被清洗成空白。其次是用了白名单外的属性（渐变、滤镜、clip-path、foreignObject、外链图片），或使用了 id 引用。建议先用「当前页 12 个」小范围试粘，再逐步扩大。</dd>
+
+  <dt>一次粘贴 100 张 SVG 会不会出问题？</dt>
+  <dd>会。完整全文约 412.9 KiB（422,774 字节，UTF-8 口径）、含 100 张 SVG，一次粘贴极可能超时、截断或被编辑器清洗。展示页在范围超过 12 张或 150 KiB 时显示红字警告，并提供全部 / 当前筛选 / 当前页 12 张 / 仅收藏四种范围，建议分批粘贴。</dd>
+
+  <dt>这个项目是开源的吗？可以在哪里下载？</dt>
+  <dd>是，采用 MIT 许可。仓库地址 https://github.com/121212165/wechat-mp-svg ，包含 SKILL.md 定义、100 个 styles/*.svg 模板、styles/catalog.json 元数据、可重复运行的生成与校验脚本、wechat-article.html 全文成品，以及 AUDIT-REPORT.md 独立审核报告。</dd>
+</dl>
+
+<h2 id="limits">6. 已知限制与诚实边界</h2>
+<ul>
+  <li><strong>未在真实公众号账号完成验收</strong>：保存草稿 → 重开 → iOS / Android 浅色与深色预览，这一整条链路尚未跑过，因此不声称「粘过去一定可用」。</li>
+  <li><strong>未重做独立盲评</strong>：v0.3.0 的结构性改造有新旧联系表截图作为视觉对照证据，但视觉可区分度是否达标、H0 是否被拒绝，仍需人眼或新一轮独立评分。</li>
+  <li><strong>白名单证据等级</strong>：全部来自个人博客、行业案例库与社区文章，非微信官方文档；资料之间还存在互相矛盾之处（详见 <a href="https://github.com/121212165/wechat-mp-svg/blob/master/README.md">README §2.2.1</a>）。</li>
+  <li><strong>体积风险</strong>：100 张一次粘贴的风险按公开限制推断，未做平台侧压力实测。</li>
+  <li><strong>不评价审美</strong>：项目起因是「我是一个 SVG 小白，不评价能力如何，先看看审美如何」，因此这里只提供对照，不下「哪个更好看」的结论。</li>
+</ul>
+
+<h2 id="sources">7. 资料来源</h2>
+<ul class="src">
+  <li>《微信公众号SVG交互图文实现原理说明》二歪同学（2022-04-13）— <a href="https://blog.waistu.com/archives/GH6ijd6e">blog.waistu.com</a></li>
+  <li>《AI slop 一则：公众号编辑器里玩 HTML/CSS 排版》夜雨聆风（2026-07）— <a href="https://www.yeyulingfeng.com/626469.html">yeyulingfeng.com</a></li>
+  <li>doocs/md 强约束 SVG 说明 — <a href="https://blog.gitcode.com/871b3ef0eeda6abca09b805bb4c85a03.html">blog.gitcode.com</a></li>
+  <li>Chrome 扩展 wechat-mp-html-source-helper — <a href="https://github.com/shyboy/wechat-mp-html-source-helper">github.com/shyboy</a></li>
+  <li>llms.txt 提案（Answer.AI / Jeremy Howard）— <a href="https://llmstxt.org/">llmstxt.org</a></li>
+  <li>完整调研报告与来源清单：<a href="https://github.com/121212165/wechat-mp-svg/blob/master/README.md">README.md</a>；约束速查：<a href="https://github.com/121212165/wechat-mp-svg/blob/master/references/wechat-svg-constraints.md">references/wechat-svg-constraints.md</a></li>
+  <li>独立审核报告（含盲评零结果）：<a href="https://github.com/121212165/wechat-mp-svg/blob/master/AUDIT-REPORT.md">AUDIT-REPORT.md</a></li>
+</ul>
+
+<footer>
+  <p>公众号 SVG Skill · v0.3.0 · MIT 许可 · 作者 <a href="https://github.com/121212165">121212165</a> · 最后更新 2026-11-09</p>
+  <p><a href="index.html">100 风格展示页</a> · <a href="wechat-article.html">全文 HTML 成品</a> · <a href="llms.txt">llms.txt</a> · <a href="sitemap.xml">sitemap.xml</a></p>
+</footer>
+
+</div>
+</body>
+</html>

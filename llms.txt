@@ -1,0 +1,33 @@
+# 公众号 SVG Skill (wechat-mp-svg)
+
+> 一个开源的微信公众号 SVG 图文排版模板库：100 个符合微信 SVG AttributeName 白名单的风格模板，纯 SMIL 声明式动画、无 JS / 无 style 标签 / 无 id 属性，附带可一键复制整篇富文本到公众号编辑器的 HTML 展示页与 Agent Skill 定义。MIT 许可，中文项目。
+
+项目面向「想把一段文案做成可粘贴进微信公众号的视觉卡片」的开发者与内容编辑。核心约束来自微信编辑器对 HTML 的清洗：script/style 被删、全部 id 被移除、CSS @keyframes 与 JS 动画失效，只有约 20 项 attributeName 的 SMIL 动画可保留。所有模板按此约束生成，并要求「移除全部动画后正文仍完整可见」。
+
+## 核心页面
+
+- [项目说明与 FAQ](https://121212165.github.io/wechat-mp-svg/guide.html): 纯静态、无 JS 的完整说明页，含白名单速查、20 个构图原型表格、常见问题与已知限制。
+- [100 风格交互展示页](https://121212165.github.io/wechat-mp-svg/index.html): 需要 JavaScript 才能渲染卡片；提供流派筛选、分页、整篇一键复制与合规自检。
+- [编译好的公众号全文 HTML](https://121212165.github.io/wechat-mp-svg/wechat-article.html): 约 412.9 KiB，内嵌 100 张 SVG，无 JS，可离线打开或导入第三方编辑器。
+
+## 文档与源码
+
+- [README 调研报告](https://github.com/121212165/wechat-mp-svg/blob/master/README.md): 7 个公开 SVG Skills 参考、3 个深入拆解、公众号生态深挖、设计资源引用与来源冲突披露。
+- [SKILL.md 定义](https://github.com/121212165/wechat-mp-svg/blob/master/SKILL.md): Skill 触发词、工作流、白名单硬约束、20 原型风格矩阵与验收边界。
+- [微信 SVG 约束速查](https://github.com/121212165/wechat-mp-svg/blob/master/references/wechat-svg-constraints.md): AttributeName 白名单明细、HTML/CSS 支持分层、粘贴兼容坑与全部来源 URL。
+- [AUDIT-REPORT.md 独立审核报告](https://github.com/121212165/wechat-mp-svg/blob/master/AUDIT-REPORT.md): 独立校验器、CDP 功能实测、两名盲评者的视觉可区分度零结果（2.20 ± 1.04 / 5）。
+- [styles/catalog.json](https://github.com/121212165/wechat-mp-svg/blob/master/styles/catalog.json): 100 个模板的元数据（编号、原型、色板、字体、动画数、画布高度）。
+- [GitHub 仓库](https://github.com/121212165/wechat-mp-svg): 源码、生成脚本、联系表与审核计划。
+
+## 关键事实（含未验证项）
+
+- 100 个模板 = 20 个构图原型 × 5 变体；930 个 SMIL 动画标签；画布高度 320–760，共 13 种；代码层面 100/100 结构唯一、色板唯一。
+- 独立盲评对 v0.2.0 给出视觉可区分度 2.20 ± 1.04 / 5（阈值 3.0），未拒绝「同骨架换色」假设；v0.3.0 已重构但**尚未重做盲评，不声称已达标**。
+- **未在真实公众号账号完成保存草稿 → 重开 → iOS/Android 浅色/深色预览验收**，不声称「粘过去一定可用」。
+- 白名单资料全部来自个人博客与社区文章，非微信官方文档，且来源之间存在冲突。
+- 一次粘贴 100 张 SVG（422,774 字节）极可能超时或被清洗，建议分批。
+
+## Optional
+
+- [新旧视觉对照联系表](https://github.com/121212165/wechat-mp-svg/blob/master/contact-v030.png): v0.3.0 的 20 张抽样栅格图。
+- [SEO 报告](https://github.com/121212165/wechat-mp-svg/blob/master/SEO.md): 关键词策略、来源、可验证项与零结果。

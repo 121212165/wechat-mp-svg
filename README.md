@@ -1,14 +1,32 @@
-# wechat-mp-svg · 公众号 SVG Skill
+# wechat-mp-svg · 公众号 SVG 排版模板（100 种风格，一键复制到微信）
 
-> 起因：用户发现 HY 4 的 SVG 能力不错，想做一个公众号 SVG skills；
-> 自认 SVG 小白，所以**不评价能力，先看审美** —— 让他做两三个风格。
->
-> **v0.1.0** 做了 3 个风格。**v0.2.0** 按「堆料，堆到不能堆为止」扩到 **100 个风格**。
-> **v0.3.0（当前）**：独立盲评判定 v0.2.0 视觉可区分度只有 2.20/5，于是把「10 骨架 × 10 参数变体」
-> 重构为 **20 个构图原型 × 5 变体** —— 改变的是信息架构与画布比例，不再只是换色换参数。
->
-> 本仓库 = Skill 包 + HTML 展示页（整篇一键复制）+ 编译好的公众号全文 + 带来源的调研报告 + 可复现的生成/校验脚本。
-> 100 个风格展示的**是同一段原文**（原文照录，仅作断句分行，未改字、未润色）。
+![v0.3.0](https://img.shields.io/badge/version-v0.3.0-635BFF) ![MIT](https://img.shields.io/badge/license-MIT-2F6B4F) ![100 SVG](https://img.shields.io/badge/templates-100-18181B) ![SMIL whitelist](https://img.shields.io/badge/SMIL-whitelist--checked-57534E)
+
+**一句话**：一个开源的微信公众号 SVG 图文排版模板库 —— 100 个按微信 `SVG AttributeName` 白名单从第一笔编写的风格模板，20 个构图原型、930 个 SMIL 动画标签，不用 JavaScript、不用 `<style>`、不用 `id`；打开 [100 风格展示页](https://121212165.github.io/wechat-mp-svg/)，点「一键复制全文」，到公众号后台 `Ctrl+V` 就是一篇完整图文。纯静态、MIT 许可、可离线使用。
+
+**在线入口**：[图文说明与常见问题（纯静态，无需 JS）](https://121212165.github.io/wechat-mp-svg/guide.html) · [100 风格交互展示页](https://121212165.github.io/wechat-mp-svg/) · [WorkBuddy 在线版](https://wechat-svg-styles.app.workbuddy.host/?sharecode=ABASRVDAE5) · [GitHub 仓库](https://github.com/121212165/wechat-mp-svg)
+
+### 快速开始
+
+1. 打开 [100 风格展示页](https://121212165.github.io/wechat-mp-svg/)，按 20 个构图原型筛选、分页浏览。
+2. 单张用卡片上的「一键复制到公众号」；整篇用顶部「一键复制全文」，范围可选全部 100 / 当前筛选 / 当前页 12 张 / 仅收藏。
+3. 到公众号后台正文按 `Ctrl+V`。若富文本被清洗，改用「复制全文 HTML 源码」走 HTML 源码模式或第三方编辑器；保存草稿后**务必真机预览**。
+
+> ⚠️ 一次粘贴 100 张 SVG（412.9 KiB / 422,774 字节）极可能超时或被清洗，建议先用「当前页 12 张」试粘再分批。
+> 本项目**未**在真实公众号账号完成保存 → 重开 → iOS / Android 浅色深色预览验收，不声称「粘过去一定可用」。
+
+<details>
+<summary>项目起因与版本历史</summary>
+
+起因：用户发现 HY 4 的 SVG 能力不错，想做一个公众号 SVG skills；自认 SVG 小白，所以**不评价能力，先看审美** —— 让他做两三个风格。
+
+- **v0.1.0**：3 个风格，模板已归档到 `styles/legacy-v0.1/`。
+- **v0.2.0**：按「堆料，堆到不能堆为止」扩到 100 个风格（10 骨架 × 10 参数变体）。
+- **v0.3.0（当前）**：独立盲评判定 v0.2.0 视觉可区分度只有 2.20/5，重构为 **20 个构图原型 × 5 变体** —— 改变的是信息架构与画布比例，不再只是换色换参数。
+
+本仓库 = Skill 包 + HTML 展示页（整篇一键复制）+ 编译好的公众号全文 + 带来源的调研报告 + 可复现的生成 / 校验脚本。100 个风格展示的**是同一段原文**（原文照录，仅作断句分行，未改字、未润色）。
+
+</details>
 
 **文案原文**
 > 我发现HY 4 svg 能力不错 我想做一个公众号是svg skills 我是一个svg 小白 所以不去评价能力如何先看看审美如何 我让他做了两三个风格
@@ -22,7 +40,11 @@ wechat-svg-skills/
 ├── README.md                          ← 调研报告 + 使用说明
 ├── SKILL.md                           ← Skill 定义（可安装到 ~/.workbuddy/skills）
 ├── index.html                         ← 展示页：100 风格 / 筛选 / 分页 / 整篇一键复制 / 合规自检
+├── guide.html                         ← 纯静态 SEO 着陆页：白名单速查 / FAQ / 已知限制（无需 JS）
 ├── wechat-article.html                ← 编译好的公众号全文（100 张 SVG，无 JS，可离线打开）
+├── robots.txt / sitemap.xml / llms.txt ← 站点与 AI 可读入口
+├── favicon.svg / og-image.png / social-preview.png ← 图标与社交分享卡
+├── SEO.md / PROMOTION.md              ← SEO 报告与关键词策略 / 多平台推广文案包
 ├── preview.png                        ← 展示页首屏截图（1280×2600）
 ├── contact-v020.png / contact-v030.png ← 新旧 20 张抽样联系表（视觉对照证据）
 ├── AUDIT.md / AUDIT-PROMPT.md / AUDIT-REPORT.md ← 独立审核计划 / 启动指令 / 审核报告
@@ -36,7 +58,9 @@ wechat-svg-skills/
 │   ├── generate-styles.mjs            ← 生成 100 张 SVG + 注入展示页 + 全量白名单校验
 │   ├── build-article.mjs              ← 从展示页纯函数导出 wechat-article.html
 │   ├── verify-page.mjs                ← 模拟 DOM 执行页面脚本的逻辑验证
-│   └── contact-sheet.mjs              ← 生成新 / 旧视觉对照联系表
+│   ├── contact-sheet.mjs              ← 生成新 / 旧视觉对照联系表
+│   ├── make-cards.mjs                 ← 生成 OG / Social Preview 两张分享卡
+│   └── verify-seo.mjs                 ← 校验 meta / JSON-LD / sitemap / 图片 / 内链
 └── references/
     └── wechat-svg-constraints.md      ← 公众号 SVG 硬约束 + 全部来源 URL
 ```
@@ -44,6 +68,10 @@ wechat-svg-skills/
 ---
 
 # 零、v0.3.0：100 个风格是怎么堆出来的
+
+> 下面这张参数表是 **v0.2.0 的历史编号**（001–010 瑞士网格、011–020 杂志分栏……）。
+> v0.3.0 已重排为 **20 个构图原型 × 5 变体**（001–005 瑞士网格、006–010 杂志分栏……），
+> 当前编号与画布高度请以 [§3.2 的 20 原型矩阵](#32-20-构图原型--100-风格对照表) 为准。
 
 **v0.3.0 的关键改变**：独立盲评指出 v0.2.0 的「10 骨架 × 10 参数变体」在人眼里只有约 9 类。
 现在改为 **20 个构图原型 × 5 变体**：前 10 个是原有流派，后 10 个（`tools/families-extra.mjs`）
